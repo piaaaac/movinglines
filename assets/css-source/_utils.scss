@@ -21,13 +21,13 @@
   color: white;
 }
 .color-green {
-  color: $green_fraga !important;
+  color: $green_fraga_lighter !important;
 }
 .color-white-50 {
   color: rgba(white, 0.5);
 }
 .color-bg_color_dark {
-  color: $bg_color_dark;
+  color: $bg_color_darkest;
 }
 .color-listed {
   color: #a8d451;
@@ -85,7 +85,7 @@
 }
 
 .outlined-page_bg_color {
-  @include text-outline($page_bg_color, 1px);
+  @include text-outline(var(--bg-color), 1px);
 }
 
 // -----------------------------------------------------------------------------

@@ -1,14 +1,25 @@
 <?php
-// $lineColor = "#006600"; // --- darker color that works well for lines in HP
-$lineColor = "#44783b"; // --- last green_fraga
+$green_fraga_lighter = "#376349";
+$green_fraga_darker = "#1a3425";
+$page_bg_color_darker = "#ced8eb";
+$page_bg_color_lighter = "#eef1f5";
+
+// --- Prepare nav data
+
+// $siblings = $page->siblings()->listed();
+// $prevPage = $page->hasPrev($siblings) ? $page->prev($siblings) : $siblings->last();
+// $nextPage = $page->hasNext($siblings) ? $page->next($siblings) : $siblings->first();
 
 // --- Prepare story data
 
 $from = getFromPlace($page);
 $fromCountry = getFromCountry($page);
+$fromCountryCode = getFromCountryCode($page);
 $to = getToPlace($page);
 $toCountry = getToCountry($page);
+$toCountryCode = getToCountryCode($page);
 $subtitle = "$from, $fromCountry → $to, $toCountry";
+$subtitleShort = "$from, $fromCountryCode → $to, $toCountryCode";
 
 // --- Stats 
 
@@ -75,7 +86,7 @@ if ((int)$totals["totalDays"] > 60) {
 
 <?php snippet("header", ["tallMenu" => true]) ?>
 
-<?php snippet("menu", ["subtitle" => "$subtitle", "showSwitch" => true]) ?>
+<?php snippet("menu", ["subtitle" => "$subtitle", "subtitleMobile" => "$subtitleShort", "showSwitch" => true, "showNav" => true]) ?>
 
 <?php snippet('handlebars-templates') ?>
 
@@ -90,34 +101,40 @@ if ((int)$totals["totalDays"] > 60) {
       </div>
     </div>
   </div>
+  <div class="map-legend">
+    <img src="<?= $kirby->url("assets") ?>/images/legend-lines.svg" />
+  </div>
 </section>
 
+<?php /*  
 <div class="debug" style="position: fixed; bottom: 20px; left: 20px; z-index: 10;">
-  <?php
-  $siblings = $page->siblings()->listed();
-  $prevPage = $page->hasPrev($siblings) ? $page->prev($siblings) : $siblings->last();
-  $nextPage = $page->hasNext($siblings) ? $page->next($siblings) : $siblings->first();
-  ?>
   <a href="<?= $prevPage->url() ?>" class="button small grey-light one-of-two">Prev</a>
   <a href="<?= $nextPage->url() ?>" class="button small grey-light one-of-two">Next</a>
 </div>
+*/ ?>
+
+<a class="scroll-down"></a>
 
 <section id="about" class="mt-5">
   <div class="container-fluid texts">
     <div class="row">
       <div class="col-lg-6">
-        <h5 class="mb-4"><?= $page->title() ?>'s trip</h5>
+        <h5 class="mb-4"><?= $page->title() ?>’s trip</h5>
 
-        <div>
+        <div class="font-sans-s">
           <?= $page->title() ?> travelled by <?= implode(", ", $totals["transports"]) ?> and passed through <?= count($totals["countries"]) ?> countries: <?= implode(", ", $totals["countries"]) ?>.
           The trip lasted in total <?= round($totals["totalDays"]) ?> days, <?= round($totals["travelDays"]) ?> of which spent traveling and <?= round($totals["stayDays"]) ?> of which spent staying in places.
         </div>
 
-        <div class="trip-symbols my-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
+        <div class="mt-4">
+          <img src="<?= $kirby->url("assets") ?>/images/legend-days-line.svg" />
+        </div>
+
+        <div class="trip-symbols mt-2 mb-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
           <?= implode(" ", $totals["daysSequence"]) ?>
         </div>
 
-        <div class="my-4"><?= $page->text()->kt() ?></div>
+        <div class="my-4 font-ser-m"><?= $page->text()->kt() ?></div>
 
       </div>
 
@@ -144,6 +161,24 @@ if ((int)$totals["totalDays"] > 60) {
 </section>
 
 <script>
+  function getColor1(bool) {
+    return bool ? cd : cl;
+  }
+
+  // change root css variable --bg-color at the beginning, and then on scroll
+  var root = document.documentElement;
+  var cl = "<?= $page_bg_color_lighter ?>";
+  var cd = "<?= $page_bg_color_darker ?>";
+  root.style.setProperty('--bg-color', getColor1(localStorage.getItem("mapVisible") === "true"));
+  window.addEventListener('scroll', () => {
+    var scrollY = window.scrollY;
+    var t = apMap(scrollY, 0, window.innerHeight * 0.6, 0, 1, true);
+    var c1 = getColor1(localStorage.getItem("mapVisible") === "true");
+    var c2 = cd;
+    var newColor = blendHex(c1, c2, t);
+    root.style.setProperty('--bg-color', newColor);
+  });
+
   // --------------------------------
   // Kirby > JS data init
   // --------------------------------
@@ -155,7 +190,7 @@ if ((int)$totals["totalDays"] > 60) {
   var legStats = <?= json_encode($legStats) ?>;
   console.log("legStats", legStats);
 
-  var lineColor = "<?= $lineColor ?>";
+  var lineColor = "<?= $green_fraga_darker ?>";
 
   var state = {
     loadCount: 0,
@@ -191,7 +226,7 @@ if ((int)$totals["totalDays"] > 60) {
     zoom: 7,
     attributionControl: false,
     logoPosition: 'bottom-right',
-    scrollZoom: false,
+    scrollZoom: (localStorage.getItem("mapVisible") === "true"),
   });
 
   // --------------------------------
@@ -279,7 +314,7 @@ if ((int)$totals["totalDays"] > 60) {
     var bounds = getBounds(coordinates)
     map.fitBounds(bounds, {
       padding: paddingValues(),
-      duration: 4000,
+      duration: 1500,
     });
   }
 
@@ -297,7 +332,7 @@ if ((int)$totals["totalDays"] > 60) {
       ["zoom"],
       3, 1.5,
       6, 2,
-      9, 4.5,
+      9, 2.5,
     ];
 
     // Only for when adding the layer
@@ -438,13 +473,14 @@ if ((int)$totals["totalDays"] > 60) {
 
       // Info box
       var e = state.storyPlaces[state.activeLegIndex];
+      e.tripComments = kti(e.tripComments);
       console.log("highlightLeg", e);
       // merge object with defaults to 0 values for missing keys
       var stats = Object.assign({
         "tripDays": 0,
         "stayDays": 0,
         "noTripData": 0,
-      }, legStats[state.activeLegIndex] || {});
+      }, legStats[state.activeLegIndex - 1] || {});
       var markup = templateLegInfoContents({
         "place": e,
         "bars": {
@@ -471,7 +507,7 @@ if ((int)$totals["totalDays"] > 60) {
         }
         map.fitBounds(bbox, {
           padding: paddingValues(),
-          duration: 3000,
+          duration: 1200,
         });
       }
     }
@@ -524,7 +560,7 @@ if ((int)$totals["totalDays"] > 60) {
         }
       }
 
-      console.log("DEBUG", leg.geojsonleg);
+      // console.log("DEBUG", leg.geojsonleg);
 
       var place = {
         "name": leg.place,
@@ -575,10 +611,10 @@ if ((int)$totals["totalDays"] > 60) {
         ],
       };
       if (legs[i].geojsonuse == "true" && legs[i].geojsonleg != "") {
-        console.log(legs[i], "using geojson for leg " + i);
+        // console.log(legs[i], "using geojson for leg " + i); 
         try {
           var geojsonLeg = JSON.parse(legs[i].geojsonleg);
-          console.log("geojsonLeg", geojsonLeg)
+          // console.log("geojsonLeg", geojsonLeg) 
           geometry = geojsonLeg.features[0].geometry;
         } catch (e) {
           console.error("Error parsing geojson for leg " + i, e);
@@ -659,13 +695,28 @@ if ((int)$totals["totalDays"] > 60) {
     }
     if (bool === true) {
       state.currentMapStyle = mbStyleWithBg;
-      // map.scrollZoom.enable();
+      map.scrollZoom.enable();
     } else {
       state.currentMapStyle = mbStyleEmpty;
-      // map.scrollZoom.disable();
+      map.scrollZoom.disable();
     }
     map.setStyle(state.currentMapStyle);
     localStorage.setItem("mapVisible", String(bool));
+    window.dispatchEvent(new Event('scroll'));
+  }
+
+  // --- Utils
+
+  function kti(text) {
+    if (!text) return "";
+
+    // Normalize Windows/Mac line endings
+    const normalized = text.replace(/\r\n?/g, "\n");
+
+    // Convert newlines to <br>
+    const withBreaks = normalized.replace(/\n/g, "<br>");
+
+    return withBreaks;
   }
 
   // --- Keyboard
@@ -701,6 +752,21 @@ if ((int)$totals["totalDays"] > 60) {
         break;
     }
   }
+
+  // --- Events
+
+  document.querySelector('a.scroll-down').addEventListener('click', function(e) {
+    e.preventDefault();
+    const el = document.getElementById('map-container');
+    const rect = el.getBoundingClientRect();
+    const elementBottom = window.scrollY + rect.bottom;
+    const targetScroll = elementBottom - 105;
+    window.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth'
+    });
+  });
+
 
   // --- Handlebars templates ---------
   // --- see https://tutorialzine.com/2015/01/learn-handlebars-in-10-minutes

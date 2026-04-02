@@ -1,0 +1,104 @@
+Title: People dead and missing along migration routes to Europe since January 2014 to date
+
+----
+
+Cover: 
+
+----
+
+Tags: Migration Routes
+
+----
+
+Places: Mediterranean, Europe, Africa
+
+----
+
+Blocks: [{"content":{"contentblocks":"[{\"content\":{\"text\":\"<iframe title=\\\"People dead and missing along migration routes to Europe since January 2014 to date.\\\" aria-label=\\\"Symbol map\\\" id=\\\"datawrapper-chart-FoK0S\\\" src=\\\"https://datawrapper.dwcdn.net/FoK0S/3/\\\" scrolling=\\\"no\\\" frameborder=\\\"0\\\" style=\\\"width: 0; min-width: 100% !important; border: none;\\\" height=\\\"694\\\" data-external=\\\"1\\\"></iframe><script type=\\\"text/javascript\\\">window.addEventListener(\\\"message\\\",function(a){if(void 0!==a.data[\\\"datawrapper-height\\\"]){var e=document.querySelectorAll(\\\"iframe\\\");for(var t in a.data[\\\"datawrapper-height\\\"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data[\\\"datawrapper-height\\\"][t]+\\\"px\\\";r.style.height=d}}});</script>\"},\"id\":\"e870db12-3b36-4f67-9797-2721c2a5f214\",\"isHidden\":false,\"type\":\"markdown\"}]","grid":"containerfull","bgcolor":"none","bordertop":"false","borderbottom":"false","paddingtop":"one","paddingbottom":"none"},"id":"0011d7ef-2ef1-488b-b7e9-960fbd35ca72","isHidden":false,"type":"blocks_wrapper"},{"content":{"contentblocks":"[{\"content\":{\"text\":\"<iframe title=\\\"from 2014: recap\\\" aria-label=\\\"Table\\\" id=\\\"datawrapper-chart-65Ooi\\\" src=\\\"https://datawrapper.dwcdn.net/65Ooi/2/\\\" scrolling=\\\"no\\\" frameborder=\\\"0\\\" style=\\\"width: 0; min-width: 100% !important; border: none;\\\" height=\\\"187\\\" data-external=\\\"1\\\"></iframe><script type=\\\"text/javascript\\\">window.addEventListener(\\\"message\\\",function(a){if(void 0!==a.data[\\\"datawrapper-height\\\"]){var e=document.querySelectorAll(\\\"iframe\\\");for(var t in a.data[\\\"datawrapper-height\\\"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data[\\\"datawrapper-height\\\"][t]+\\\"px\\\";r.style.height=d}}});</script>\"},\"id\":\"e870db12-3b36-4f67-9797-2721c2a5f214\",\"isHidden\":false,\"type\":\"markdown\"}]","grid":"containerfull","bgcolor":"none","bordertop":"false","borderbottom":"false","paddingtop":"none","paddingbottom":"one"},"id":"4aa6236f-9927-4bde-a1da-29e93630da3a","isHidden":false,"type":"blocks_wrapper"},{"content":{"paddingtop":"one","paddingbottom":"one","text":"<p><strong>There are four main migration routes taken by people on the move to reach the so-called \"<em>first arrival\"</em> countries in Europe </strong>(Spain, Italy, Malta, Greece, Cyprus and Bulgaria).</p><p>These routes form the middle section of a journey that begins in Africa, the Middle East or South-West Asia, and which then continues by sea or land until the migrants reach Europe, before they cross the continent.</p><p><br>Both on the map and in the charts below, <strong>the routes are colour-coded</strong>, with each route having the following characteristics:</p><ul><li><p><strong>Western African Atlantic Route (red):</strong> this is a sea route from Morocco, Western Sahara, Mauritania, Senegal and The Gambia to the Canary Islands (Spain). <br>It is extremely dangerous, as it involves crossing the Atlantic Ocean. It has seen an increase in flows during periods when the land crossings at Ceuta and Melilla to Spain were closed.<br></p></li><li><p><strong>Western Mediterranean Route (green):</strong> this is the land and sea route from North-West Africa (Morocco and Algeria) to southern Spain (Ceuta, Melilla and the Balearic Islands).<br></p></li><li><p><strong>Central Mediterranean Route (orange):</strong> this is the sea route from North Africa (particularly Tunisia, Algeria, Libya and Egypt) to Malta and Italy. <br>It is the most dangerous and has the highest number of deaths and missing people.<br></p></li><li><p><strong>Eastern Mediterranean Route (blue):</strong> this is the route, both by sea and by land, leading from Turkey to Greece, Cyprus and Bulgaria. By land, it continues along the dangerous Balkan Route, where walls and barriers increase and are modified year after year, adapting to legislative changes.</p></li></ul>"},"id":"f85e1682-3f6f-4492-8d4a-4cd4ab60cbaf","isHidden":false,"type":"text"},{"content":{"contentblocks":"[{\"content\":{\"text\":\"<iframe title=\\\"People dead and missing along migration routes to Europe from 2014 to date (by year)\\\" aria-label=\\\"Stacked column chart\\\" id=\\\"datawrapper-chart-vSnwd\\\" src=\\\"https://datawrapper.dwcdn.net/vSnwd/23/\\\" scrolling=\\\"no\\\" frameborder=\\\"0\\\" style=\\\"width: 0; min-width: 100% !important; border: none;\\\" height=\\\"343\\\" data-external=\\\"1\\\"></iframe>\"},\"id\":\"8f0c0e83-9561-4a27-bdf0-22ee4e8ae11a\",\"isHidden\":false,\"type\":\"markdown\"}]","grid":"containerfull","bgcolor":"none","bordertop":"false","borderbottom":"false","paddingtop":"one","paddingbottom":"none"},"id":"459e9bc4-d1bc-41f2-803d-44fdbe4439bb","isHidden":false,"type":"blocks_wrapper"},{"content":{"contentblocks":"[{\"content\":{\"text\":\"<iframe title=\\\"Table: People dead and missing along migration routes to Europe from 2014 to date (by year)\\\" aria-label=\\\"Table\\\" id=\\\"datawrapper-chart-iM2Pq\\\" src=\\\"https://datawrapper.dwcdn.net/iM2Pq/12/\\\" scrolling=\\\"no\\\" frameborder=\\\"0\\\" style=\\\"width: 0; min-width: 100% !important; border: none;\\\" height=\\\"176\\\" data-external=\\\"1\\\"></iframe>\"},\"id\":\"e49aaf04-676a-429c-b696-909d2c124dbe\",\"isHidden\":false,\"type\":\"markdown\"}]","grid":"containerfull","bgcolor":"none","bordertop":"false","borderbottom":"false","paddingtop":"none","paddingbottom":"one"},"id":"707d9a23-8646-4f1d-b95c-6ce3eca326a0","isHidden":false,"type":"blocks_wrapper"},{"content":{"paddingtop":"one","paddingbottom":"one","text":"<h2><strong>Cause of death</strong></h2><p><strong>The main cause of death on migration routes to Europe was and remains drowning</strong>. Both the Central Mediterranean route and the Western African Atlantic route are entirely by sea, which also explains the <strong>high percentage of people missing (on average &gt; 50%).</strong></p>"},"id":"239ad970-ae82-4d03-a34e-9021e8b9f4da","isHidden":false,"type":"text"},{"content":{"contentblocks":"[{\"content\":{\"text\":\"<iframe title=\\\"to EU cause of Death\\\" aria-label=\\\"Table\\\" id=\\\"datawrapper-chart-8MJZo\\\" src=\\\"https://datawrapper.dwcdn.net/8MJZo/2/\\\" scrolling=\\\"no\\\" frameborder=\\\"0\\\" style=\\\"width: 0; min-width: 100% !important; border: none;\\\" height=\\\"382\\\" data-external=\\\"1\\\"></iframe>\"},\"id\":\"ef80bf39-5952-417d-9036-6a484948ac74\",\"isHidden\":false,\"type\":\"markdown\"}]","grid":"","bgcolor":"none","bordertop":"false","borderbottom":"false","paddingtop":"one","paddingbottom":"one"},"id":"ca6fdbdc-41d5-48b0-bffe-def464a0600a","isHidden":false,"type":"blocks_wrapper"}]
+
+----
+
+Updated: 2026-03-30 17:30:29
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: true
+
+----
+
+Metadescription: 
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: true
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: true
+
+----
+
+Robotsfollow: true
+
+----
+
+Robotsarchive: true
+
+----
+
+Robotsimageindex: true
+
+----
+
+Robotssnippet: true
+
+----
+
+Metainherit: 
+
+----
+
+Text:
+
+Serbia has introduced a new set of policy updates aimed at strengthening the integration of refugees and asylum seekers, following close cooperation with the UN Refugee Agency (UNHCR). The revised framework focuses on improving access to essential services, clarifying legal protections, and outlining clearer responsibilities for individuals seeking long‑term residence in the country.
+According to officials involved in the process, the updates are designed to bring Serbia’s practices closer to international standards while responding to the realities on the ground. Over the past decade, Serbia has served as both a transit and host country for people fleeing conflict, persecution, and instability. The new measures aim to ensure that those who remain in Serbia can build stable, self‑reliant lives.
+A central component of the updated policies is expanded support for integration. Refugees will have improved access to language courses, vocational training, and employment counseling, helping them enter the labor market more quickly. Local municipalities will also receive additional guidance on how to support newcomers, with an emphasis on community‑level inclusion and cooperation with civil society organizations.
+The reforms also clarify the rights of refugees regarding healthcare, education, and legal assistance. UNHCR representatives noted that the changes are intended to reduce administrative barriers and ensure that asylum seekers can navigate the system more easily. At the same time, the policy package outlines obligations for refugees, including compliance with residency rules, participation in integration programs, and adherence to Serbian laws.
+Government officials emphasized that the updates reflect Serbia’s commitment to humane and responsible migration management. UNHCR welcomed the reforms as a positive step toward creating a more predictable and supportive environment for people seeking protection.
+As implementation begins, both the government and UNHCR have highlighted the importance of continued collaboration with local communities, NGOs, and international partners. The success of the new policies, they say, will depend on sustained investment in integration programs and ongoing dialogue between all stakeholders.
+
+----
+
+Date: 2023-01-22
+
+----
+
+Uuid: JRAfVVzCGj6EaAQt

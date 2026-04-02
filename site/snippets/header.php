@@ -25,6 +25,9 @@ $tallMenu = $tallMenu ?? false;
     window.siteUrl = '<?= $site->url() ?>';
     window.currentPage = '<?= $page->uid() ?>';
     window.currentTemplate = '<?= $page->template()->name() ?>';
+
+    // Data from kirby to js
+    window.transports = <?= $site->transports()->toStructure()->toJson() ?>;
   </script>
 
   <?= js(['assets/js/common.js']) ?>

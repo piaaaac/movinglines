@@ -45,7 +45,7 @@ stats
 <script id="hb-leginfocontents" type="text/x-handlebars-template">
   <div class="box-wrapper" style="width: 300px;">
     <div class="box my-1">
-      <h2 class="font-sans-m font-weight-400 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}</h2>
+      <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}</h2>
 
       <div class="font-sans-s mb-2">
         Traveled
@@ -56,10 +56,10 @@ stats
       </div>
 
       {{#if place.tripComments}}
-        <p class="m-0 font-sans-s color-grey">{{place.tripComments}}</p>
+        <p class="m-0 mt-3 font-ser-m color-grey">{{{place.tripComments}}}</p>
       {{/if}}
 
-      <div class="stats mt-2">
+      <div class="stats mt-3">
         <!--  
           <div class="font-sans-s">Transport: {{place.tripTransport}}</div>
           <div class="bar"><div class="fill" style="width: {{bars.transport}}%;"></div></div>
@@ -73,29 +73,32 @@ stats
             {{stats.tripDays}} {{pluralize stats.tripDays "day" "days"}} traveling
           {{/if}}
           {{#if stats.stayDays}}
-            , {{stats.stayDays}} {{pluralize stats.stayDays "day" "days"}} permanence
+            and {{stats.stayDays}} {{pluralize stats.stayDays "day" "days"}} spent there.
           {{/if}}
           
         </div>
         
         <div class="trip-symbols mt-2" data-style="small">
           {{#repeat stats.tripDays}}
-            <span class='tr'></span>
+          <span class='tr'></span>
           {{/repeat}}
           {{#repeat stats.noTripData}}
-            <span class='tr-nodata'></span>
+          <span class='tr-nodata'></span>
           {{/repeat}}
           {{#repeat stats.stayDays}}
-            <span class='st'></span>
+          <span class='st'></span>
           {{/repeat}}
+        </div>
+        <div class="my-2">
+          <img src="<?= $kirby->url("assets") ?>/images/legend-days-line-short.svg" />
         </div>
 
         <a id="close-leg-button" class="pointer" onclick="navigationAction('close-leg');">&times;</a>
       </div>
 
       <div class="action-buttons mt-4 mb-1">
-        <a class="button small green-dark grey-light one-of-two" onclick="navigationAction('highlight-prev-leg');">Prev</a>
-        <a class="button small green-dark grey-light one-of-two" onclick="navigationAction('highlight-next-leg');">Next</a>
+        <a class="button small green-light one-of-two" onclick="navigationAction('highlight-prev-leg');">Prev</a>
+        <a class="button small green-light one-of-two" onclick="navigationAction('highlight-next-leg');">Next</a>
       </div>
 
     </div>
@@ -120,14 +123,14 @@ name – string
     <div class="box my-1">
       <!-- <h2 class="font-sans-m">{{title}}</h2> -->
       {{#if text}}
-        <p class="m-0 font-sans-s">{{text}}</p>
+        <p class="m-0 font-sans-s">{{{text}}}</p>
       {{/if}}
       {{#if quote}}
-        <p class="m-0 mt-2 font-sans-s">{{quote}}</p>
+        <p class="m-0 mt-3 mb-2 font-ser-m">{{{quote}}}</p>
       {{/if}}
     </div>
     <div class="action-buttons">
-      <a class="button small green-dark" onclick="navigationAction('start-story');">Explore {{name}}'s trip</a>
+      <a class="button small green-light" onclick="navigationAction('start-story');">Explore {{name}}'s trip</a>
     </div>
   </div>
 </script>

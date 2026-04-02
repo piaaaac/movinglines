@@ -5,51 +5,24 @@
 // LABELS VIA FRAGA
 // On foot · Air transport · Sea transport · Land transport
 
-var lineStyles = {
+var lineTypes = {
   walk: { dashArray: [0, 3] }, // OK
-  ground: { dashArray: [1] },
   sea: { dashArray: [6, 5] }, // OK
+  ground: { dashArray: [1] },
   air: { dashArray: [1] },
   other: { dashArray: [1] },
 };
 
-function kirbyTransportToDashArray(kirbyTransport) {
-  var lineStyle;
-  switch (kirbyTransport) {
-    case "plane":
-      lineStyle = "air";
-      break;
-    case "boat":
-      lineStyle = "sea";
-      break;
-    case "bus":
-    case "car":
-    case "truck":
-    case "train":
-    case "taxi":
-      lineStyle = "ground";
-      break;
-    case "walk":
-      lineStyle = "walk";
-      break;
-    default:
-      lineStyle = "other";
-      break;
-  }
-
-  var dashArray = lineStyles[lineStyle].dashArray;
-  // console.log("kirbyTransport:", kirbyTransport)
-  // console.log("lineStyle:", lineStyle)
-  // console.log("dashArray:", dashArray)
-
-  return dashArray;
+function getLineTypeById(id) {
+  const defaultLineType = "other";
+  if (!window.transports) return defaultLineType;
+  const item = window.transports.find((t) => t.id === id);
+  return item ? item.linetype : defaultLineType;
 }
 
-function randomLineStyle() {
-  var styleNames = Object.keys(lineStyles);
-  var styleName = styleNames[Math.floor(Math.random() * styleNames.length)];
-  var lineStyle = lineStyles[styleName];
-  var dashArray = lineStyle.dashArray;
+function kirbyTransportToDashArray(kirbyTransport) {
+  var lineType = getLineTypeById(kirbyTransport);
+  var dashArray = lineTypes[lineType].dashArray;
   return dashArray;
 }
 
@@ -72,7 +45,7 @@ function getEmptySource() {
 }
 
 function getBounds(coordinates) {
-  console.log("getBounds coordinates", coordinates);
+  // console.log("getBounds coordinates", coordinates);
 
   // Create a 'LngLatBounds' with both corners at the first coordinate.
   const bounds = new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]);

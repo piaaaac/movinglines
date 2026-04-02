@@ -78,6 +78,7 @@ tabs:
           legs:
             label: Trip places
             type: structure
+            translate: false
             fields:
               place:
                 type: text
@@ -100,15 +101,12 @@ tabs:
                 translate: false
               transport:
                 type: select
-                options:
-                  walk: walking
-                  boat: boat
-                  bus: bus
-                  truck: truck
-                  train: train
-                  car: car
-                  taxi: taxi
-                  plane: plane
+                options: query
+                query:
+                  fetch: site.transports.toStructure.sortBy("text", "asc")
+                  text: "{{ item.text }}"
+                  # text: "{{ item.text }} (line {{ item.lineType }})"
+                  value: "{{ item.id }}"
                 translate: false
               durationDays:
                 type: number
@@ -135,7 +133,6 @@ tabs:
               geojsonLeg:
                 type: textarea
                 spellcheck: false
-                translate: false
                 width: 3/4
                 translate: false
               geojsonUse:
@@ -154,7 +151,7 @@ tabs:
             size: small
             width: 1/2
             translate: false
-          
+
           storyImages:
             label: Images
             type: files
@@ -167,7 +164,6 @@ tabs:
 
           blocks:
             extends: fields/content_blocks
-
 
       files:
         type: files

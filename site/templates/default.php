@@ -42,11 +42,11 @@ $hideDefaultTitle = $page->hideDefaultTitle()->bool();
       <?php endif ?>
 
       <?php foreach ($page->tags()->split(",") as $tag) : ?>
-        <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary"><?= trim($tag) ?></a>
+        <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
       <?php endforeach ?>
 
       <?php foreach ($page->places()->split(",") as $tag) : ?>
-        <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary"><?= trim($tag) ?></a>
+        <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
       <?php endforeach ?>
       <h1 class="mt-2 mb-5">
         <?= $page->title()->html() ?>

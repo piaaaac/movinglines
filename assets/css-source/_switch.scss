@@ -17,21 +17,21 @@
  *
  */
 
-$color-active: $green_fraga;
+$color-active: $green_fraga_lighter;
 
-$w: 55px;
-$h: 34px;
+$w: 65px;
+$h: 32px;
 $circle-size: 26px;
-$small-w: 34px;
-$small-h: 20px;
-$small-circle-size: 14px;
+$small-w: 36px;
+$small-h: 18px;
+$small-circle-size: 12px;
 
 label {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   .text {
-    margin-left: 10px;
+    margin-left: 7px;
   }
 }
 

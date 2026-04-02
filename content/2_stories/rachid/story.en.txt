@@ -1,0 +1,480 @@
+Title: R.
+
+----
+
+Age: 25
+
+----
+
+Sex: other
+
+----
+
+Datedeparture: 
+
+----
+
+Datearrival: 
+
+----
+
+Jobdeparture: 
+
+----
+
+Jobarrival: 
+
+----
+
+Departureplace: Tizi Ouzu
+
+----
+
+Departurecountry: DZ
+
+----
+
+Reasondeparture: 
+
+----
+
+Departurelat: 36.71667
+
+----
+
+Departurelon: 4.05
+
+----
+
+Legs:
+
+- 
+  place: Istanbul
+  country: TR
+  lat: 41.01667
+  lon: 28.96667
+  transport: plane
+  durationdays: ""
+  durationhours: 2
+  staydays: 12
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Edirne
+  country: TR
+  lat: 41.67444
+  lon: 26.56083
+  transport: train
+  durationdays: ""
+  durationhours: 4
+  staydays: 1
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Komotini
+  country: GR
+  lat: 41.1
+  lon: 25.41667
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Thessaloniki
+  country: GR
+  lat: 40.64028
+  lon: 22.93556
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: border
+  country: MK
+  lat: 41.17974
+  lon: 22.50167
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: border
+  country: XK
+  lat: 42.17779
+  lon: 21.22603
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Thessaloniki
+  country: ""
+  lat: 40.64028
+  lon: 22.93556
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Korçë
+  country: ""
+  lat: 40.61667
+  lon: 20.76667
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Tirana
+  country: ""
+  lat: 41.33
+  lon: 19.82
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: border
+  country: ""
+  lat: 42.31246
+  lon: 19.37847
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: border
+  country: ""
+  lat: 42.23779
+  lon: 19.43984
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Konik Camp
+  country: ""
+  lat: 42.42476
+  lon: 19.29809
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'village '
+  country: ""
+  lat: 43.76443
+  lon: 18.42187
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Sarajevo '
+  country: ""
+  lat: 43.85633
+  lon: 18.41322
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Velika Kladuša '
+  country: ""
+  lat: 45.18333
+  lon: 15.8
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Glina '
+  country: ""
+  lat: 45.33333
+  lon: 16.08333
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Zagreb '
+  country: ""
+  lat: 45.8
+  lon: 15.96667
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Pola '
+  country: ""
+  lat: 44.86667
+  lon: 13.83333
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'border '
+  country: ""
+  lat: 45.50485
+  lon: 14.25855
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Trieste '
+  country: ""
+  lat: 45.65028
+  lon: 13.77028
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Venice '
+  country: ""
+  lat: 45.43972
+  lon: 12.33194
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Verona '
+  country: ""
+  lat: 45.43861
+  lon: 10.99278
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Milan '
+  country: ""
+  lat: 45.46694
+  lon: 9.19
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Ventimiglia
+  country: ""
+  lat: 43.79028
+  lon: 7.60833
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Breil-sur-Roya
+  country: FR
+  lat: 43.93333
+  lon: 7.5
+  transport: bus
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Paris
+  country: FR
+  lat: 48.85667
+  lon: 2.35194
+  transport: ""
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+
+----
+
+Text: 
+
+----
+
+Notes: 
+
+----
+
+Storyimages: 
+
+----
+
+Blocks: 
+
+----
+
+Cachedsvg: <svg xmlns="http://www.w3.org/2000/svg" id="svg-map-target" viewBox="0 0 81.70223236083984 800" preserveAspectRatio="xMidYMid meet" width="800" height="800" x="0" y="0" class="geojson2svg-test" style="display: block;"><path d="M81.70223224284558,800 0,0" style="stroke:#44783b; fill: none;stroke-width:1.5px;" vector-effect="non-scaling-stroke"></path></svg>
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: true
+
+----
+
+Metadescription: 
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: true
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: default
+
+----
+
+Robotsfollow: default
+
+----
+
+Robotsarchive: default
+
+----
+
+Robotsimageindex: default
+
+----
+
+Robotssnippet: default
+
+----
+
+Metainherit: 
+
+----
+
+Uuid: Dx6amv8ADQlujgm3
+
+----
+
+Updated: 2026-04-01 12:51:01

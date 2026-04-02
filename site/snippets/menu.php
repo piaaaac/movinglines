@@ -4,16 +4,19 @@
  * Menu snippet
  * 
  * @param subtitle – string subtitle under logo
+ * @param subtitleMobile – string subtitle under logo for mobile
  * @param showSwitch – bool show template switcher
+ * @param showNav – bool show arrows to move between stories
  * @param transparentAtTop – bool whether menu is transparent at top of page
  *
  */
 $showSwitch = $showSwitch ?? false;
+$showNav = $showNav ?? false;
 $transparentAtTop = $transparentAtTop ?? false;
 
 $items = [
   (object)[
-    "text" => "Stories",
+    "text" => "Lines",
     "url" => page("stories")->url(),
     "uid" => page("stories")->uid(),
     "onclick" => "",
@@ -66,7 +69,11 @@ $items = [
             </a>
             <?php if ($page->template()->name() === "story"): ?>
               <span> / </span>
-              <span><?= $page->title() ?></span><span><?= $page->age()->isNotEmpty() ? ", " . $page->age() : "" ?></span>
+              <span>
+                <?= $page->title() ?></span><span><?= $page->age()->isNotEmpty() ? ", " . $page->age() : "" ?>
+                <span class="d-sm-none">y.o.</span>
+                <span class="d-none d-sm-inline">years old</span>
+              </span>
             <?php endif ?>
           </h2>
         </div>
@@ -94,18 +101,34 @@ $items = [
 
       <?php if (isset($subtitle) && $subtitle != ""): ?>
         <div class="col-12 wrapper-subtitle d-flex align-items-center justify-content-between">
-          <div class="font-sans-m mt-1">
-            <?= $subtitle ?>
-          </div>
-          <?php if ($showSwitch): ?>
-            <div class="template-switcher mt-1">
-              <label>
-                <div class="switch small">
-                  <input type="checkbox" id="map-checkbox" onchange="handleSwitchChange(this);">
-                  <span class="slider round"></span>
+          <?php if (isset($subtitleMobile) && $subtitleMobile != ""): ?>
+            <div class="font-sans-m mt-1 d-none d-md-block"><?= $subtitle ?></div>
+            <div class="font-sans-m mt-1 d-md-none"><?= $subtitleMobile ?></div>
+          <?php else: ?>
+            <div class="font-sans-m mt-1"><?= $subtitle ?></div>
+          <?php endif ?>
+          <?php if ($showSwitch || $showNav): ?>
+            <div class="d-flex align-items-center">
+              <?php if ($showNav):
+                $siblings = $page->siblings()->listed();
+                $prevPage = $page->hasPrev($siblings) ? $page->prev($siblings) : $siblings->last();
+                $nextPage = $page->hasNext($siblings) ? $page->next($siblings) : $siblings->first();
+              ?>
+                <a class="font-sans-m no-u mx-1 color-black pointer d-none d-md-inline-block" href="<?= $prevPage->url() ?>">&larr;</a>
+                <a class="font-sans-m no-u mx-1 color-black pointer d-none d-md-inline-block" href="<?= $nextPage->url() ?>">&rarr;</a>
+                <span class="mx-2 font-sans-m"></span>
+              <?php endif ?>
+              <?php if ($showSwitch): ?>
+                <div class="template-switcher mt-1">
+                  <label>
+                    <div class="switch small">
+                      <input type="checkbox" id="map-checkbox" onchange="handleSwitchChange(this);">
+                      <span class="slider round"></span>
+                    </div>
+                    <span class="text font-sans-m">Map</span>
+                  </label>
                 </div>
-                <span class="text font-sans-m">Map</span>
-              </label>
+              <?php endif ?>
             </div>
           <?php endif ?>
         </div>

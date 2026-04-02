@@ -49,6 +49,10 @@ function getFromCountry($story)
 {
   return countryCode2Name($story->departureCountry()->value());
 }
+function getFromCountryCode($story)
+{
+  return $story->departureCountry()->value();
+}
 function getToPlace($story)
 {
   $legs = $story->legs()->toStructure();
@@ -65,6 +69,15 @@ function getToCountry($story)
     return countryCode2Name($legs->last()->country()->value());
   } else {
     return "Unknown";
+  }
+}
+function getToCountryCode($story)
+{
+  $legs = $story->legs()->toStructure();
+  if ($legs->count() > 0) {
+    return $legs->last()->country()->value();
+  } else {
+    return "N.D.";
   }
 }
 

@@ -22,7 +22,7 @@ return [
   // ],
   // "hooks" => require_once "hooks.php", // currently []
   "assets" => [
-    "version" => "0.0.23",
+    "version" => "1.0.43",
   ],
   "thumbs" => [
     "presets" => [

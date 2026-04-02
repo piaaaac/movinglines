@@ -20,4 +20,4 @@ $stories = page("stories")->children()->listed();
 
 </script>
 
-<?php snippet("footer") ?>
+<?php snippet("footer", ["button" => false]) ?>

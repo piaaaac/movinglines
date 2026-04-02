@@ -4,16 +4,16 @@
  * @param handleEnd                       (function)
  * @param resizeOptions.delay             (number)
  * @param resizeOptions.horizontalOnly    (bool)
- * 
+ *
  * EXAMPLE
  * handleResizeStartEnd(() => {
  *   console.log("started")
  * }, () => {
  *   console.log("ended")
  * });
- * 
+ *
  * */
-function handleResizeStartEnd (handleStart, handleEnd, resizeOptions) {
+function handleResizeStartEnd(handleStart, handleEnd, resizeOptions) {
   var defaults = {
     delay: 200,
     horizontalOnly: false,
@@ -24,14 +24,22 @@ function handleResizeStartEnd (handleStart, handleEnd, resizeOptions) {
   window.lastWidth = window.innerWidth;
   window.addEventListener("resize", function () {
     if (window.resizeStarted === null) {
-      if (options.horizontalOnly === false || options.horizontalOnly === true && window.innerWidth != window.lastWidth) {
+      if (
+        options.horizontalOnly === false ||
+        (options.horizontalOnly === true &&
+          window.innerWidth != window.lastWidth)
+      ) {
         handleStart();
         window.resizeStarted = true;
       }
     }
     clearTimeout(window.resizeTimeout);
     window.resizeTimeout = setTimeout(function () {
-      if (options.horizontalOnly === false || options.horizontalOnly === true && window.innerWidth != window.lastWidth) {
+      if (
+        options.horizontalOnly === false ||
+        (options.horizontalOnly === true &&
+          window.innerWidth != window.lastWidth)
+      ) {
         handleEnd();
         window.resizeStarted = null;
         window.resizeTimeout = null;
@@ -41,15 +49,13 @@ function handleResizeStartEnd (handleStart, handleEnd, resizeOptions) {
   });
 }
 
-
-
 /**
  *  via p5 code
  *  https://github.com/processing/p5.js/blob/master/src/math/calculation.js
  *  dependency: apConstrain
  */
-function apMap (n, start1, stop1, start2, stop2, withinBounds) {
-  const newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
+function apMap(n, start1, stop1, start2, stop2, withinBounds) {
+  const newval = ((n - start1) / (stop1 - start1)) * (stop2 - start2) + start2;
   if (!withinBounds) {
     return newval;
   }
@@ -60,31 +66,60 @@ function apMap (n, start1, stop1, start2, stop2, withinBounds) {
   }
 }
 
-
 /**
  * Like Processing's constrain function
  */
-function apConstrain (n, low, high) {
+function apConstrain(n, low, high) {
   return Math.max(Math.min(n, high), low);
 }
 
+/**
+ * Hex‑color blending function
+ * t = 0 returns a, t = 1 returns b, t = 0.5 returns the average of a and b
+ */
+function blendHex(a, b, t) {
+  // Remove leading #
+  a = a.replace("#", "");
+  b = b.replace("#", "");
 
+  // Parse into RGB components
+  const ar = parseInt(a.substring(0, 2), 16);
+  const ag = parseInt(a.substring(2, 4), 16);
+  const ab = parseInt(a.substring(4, 6), 16);
+
+  const br = parseInt(b.substring(0, 2), 16);
+  const bg = parseInt(b.substring(2, 4), 16);
+  const bb = parseInt(b.substring(4, 6), 16);
+
+  // Linear interpolation
+  const r = Math.round(ar + (br - ar) * t);
+  const g = Math.round(ag + (bg - ag) * t);
+  const b2 = Math.round(ab + (bb - ab) * t);
+
+  // Convert back to hex
+  return (
+    "#" +
+    r.toString(16).padStart(2, "0") +
+    g.toString(16).padStart(2, "0") +
+    b2.toString(16).padStart(2, "0")
+  );
+}
 
 /** AP Web Utility
- *  Query current breakpoint in bootstrap style. 
+ *  Query current breakpoint in bootstrap style.
  *  Examples:
- *  
+ *
  *  console.log(breakpointIs("xs", "only"));
  *  console.log(breakpointIs("md", "down"));
  *  console.log(breakpointIs("lg", "up"));
  */
-function breakpointIs (breakpointName, compare) {
+function breakpointIs(breakpointName, compare) {
   var breakpoints = [
-    { "name": "xs", "index": 1, "minWidth": 0 },
-    { "name": "sm", "index": 2, "minWidth": 576 },
-    { "name": "md", "index": 3, "minWidth": 768 },
-    { "name": "lg", "index": 4, "minWidth": 992 },
-    { "name": "xl", "index": 5, "minWidth": 1200 },
+    { name: "xs", index: 1, minWidth: 0 },
+    { name: "sm", index: 2, minWidth: 576 },
+    { name: "md", index: 3, minWidth: 768 },
+    { name: "lg", index: 4, minWidth: 992 },
+    { name: "xl", index: 5, minWidth: 1200 },
   ];
   var w = window.innerWidth;
   var current = breakpoints[0];
@@ -94,13 +129,15 @@ function breakpointIs (breakpointName, compare) {
     }
   });
   // console.log("current", current.name);
-  var breakpoint = breakpoints.find(function (e) { return e.name === breakpointName });
+  var breakpoint = breakpoints.find(function (e) {
+    return e.name === breakpointName;
+  });
   if (!breakpoint) {
-    throw "(30298140) Unknown breakpointName "+ breakpointName;
+    throw "(30298140) Unknown breakpointName " + breakpointName;
   }
   var breakpointIndex = breakpoint.index;
   if (compare === "only") {
-    return (current.index === breakpointIndex);
+    return current.index === breakpointIndex;
   } else if (compare === "down") {
     return current.index <= breakpointIndex;
   } else if (compare === "up") {
@@ -111,26 +148,23 @@ function breakpointIs (breakpointName, compare) {
 // console.log(breakpointIs("md", "down"));
 // console.log(breakpointIs("lg", "up"));
 
-
-
-
 // --- Clone an object and return the clone
 // --- via https://stackoverflow.com/a/46676416
-function clone (obj) {
+function clone(obj) {
   var newObj;
-  if        (obj instanceof Array){
+  if (obj instanceof Array) {
     newObj = [];
-  } else if (obj === null){
+  } else if (obj === null) {
     return null;
   } else {
     newObj = {};
   }
   for (var prop in obj) {
-    if(typeof obj[prop] === 'object') {
+    if (typeof obj[prop] === "object") {
       newObj[prop] = clone(obj[prop]);
     } else {
-      newObj[prop] = obj[prop]
+      newObj[prop] = obj[prop];
     }
   }
   return newObj;
-};
+}

@@ -2,6 +2,7 @@
 
 /** 
  * @param markup - boolean whether to output html markup
+ * @param button - boolean whether to output the "See all lines" button
  */
 ?>
 
@@ -18,15 +19,18 @@
     </div>
   </div>
 
-  <div class="full-w-btn" style="margin-bottom: 30px;">
-    <a href="<?= page("stories")->url() ?>">
-      <?php
-      $text = "    See all stories →    ";
-      echo $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text;
-      ?>
-    </a>
-  </div>
-
+  <?php if (!isset($button) || $button !== false): ?>
+    <div class="full-w-btn" style="margin-bottom: 30px;">
+      <a href="<?= page("stories")->url() ?>">
+        <?php
+        // $text = "    See all stories →    ";
+        // echo $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text;
+        $text = "    See all lines →    ";
+        echo $text;
+        ?>
+      </a>
+    </div>
+  <?php endif; ?>
 </section>
 
 </main>

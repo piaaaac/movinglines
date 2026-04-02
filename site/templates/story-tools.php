@@ -16,6 +16,34 @@ if (!$storyPage) {
 }
 $numLegs = $storyPage->legs()->toStructure()->count();
 
+/* ------------------------------------------------ */
+// die('num legs: ' . $numLegs);
+
+// dump($storyPage->legs());
+
+// foreach ($storyPage->legs()->toStructure() as $item) {
+//   echo $item;
+// }
+
+
+// $temp = [];
+// $tempStr = "";
+// foreach ($storyPage->legs()->toStructure() as $leg) {
+//   $place = $leg->place()->value();
+//   $lon = $leg->lon()->value();
+//   $lat = $leg->lat()->value();
+//   $transport = $leg->transport()->value();
+//   $temp[] = [
+//     "place" => $place,
+//     "lon" => $lon,
+//     "lat" => $lat,
+//     "transport" => $transport,
+//   ];
+//   $tempStr .= $place . " (" . $lon . ", " . $lat . ") by " . $transport . "\n";
+// }
+// kill([$numLegs, $temp, $tempStr]);
+/* ------------------------------------------------ */
+
 $openrouteservice_apikey = "5b3ce3597851110001cf624837bcd0c908f0494794652a5a7720f62a";
 
 function getPageThumb($sp, $w = 150, $h = 150)
@@ -81,6 +109,7 @@ $stateLabel = [
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 my-5">
+            <!-- <h6><?= time() ?></h6> -->
             <p>
               <a class="color-black" href="<?= $site->pagePanelUrl($storyPage->id(), true) ?>">↖ Edit in the panel</a>
               &nbsp; | &nbsp;
@@ -798,17 +827,6 @@ $stateLabel = [
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
     function getLegObjects() {
       if (!numLegs) {
         return [];
@@ -890,66 +908,6 @@ $stateLabel = [
       });
       return geojson;
     }
-
-
-
-
-    // function getInitialRoute() {
-    //   if (!numLegs) {
-    //     return null;
-    //   }
-
-    //   // --- data from kirby
-    //   var startLon = <?= $storyPage->departureLon()->value() ?? "null" ?>;
-    //   var startLat = <?= $storyPage->departureLat()->value() ?? "null" ?>;
-    //   var startPlace = `<?= $storyPage->departurePlace()->value() ?? "null" ?>`;
-    //   var legs = <?= $storyPage->legs()->toStructure()->toJson() ?? "null" ?>;
-    //   console.log("legs", legs)
-
-    //   // --- prepare data for mapbox
-    //   var geojson = {
-    //     'type': 'FeatureCollection',
-    //     'features': []
-    //   };
-
-    //   for (var i = 0; i < legs.length; i++) {
-    //     var lonFrom = (i > 0) ? (legs[i - 1].lon) : (startLon)
-    //     var latFrom = (i > 0) ? (legs[i - 1].lat) : (startLat)
-    //     var lonTo = legs[i].lon
-    //     var latTo = legs[i].lat
-
-    //     var geometry = {
-    //       'type': 'LineString',
-    //       'coordinates': [
-    //         [lonFrom, latFrom],
-    //         [lonTo, latTo],
-    //       ],
-    //     };
-    //     if (legs[i].geojsonuse == "true" && legs[i].geojsonleg != "") {
-    //       console.log(legs[i], "using geojson for leg " + i);
-    //       try {
-    //         var geojsonLeg = JSON.parse(legs[i].geojsonleg);
-    //         console.log("geojsonLeg", geojsonLeg)
-    //         geometry = geojsonLeg.features[0].geometry;
-    //       } catch (e) {
-    //         console.error("Error parsing geojson for leg " + i, e);
-    //       }
-    //     }
-
-    //     var feature = {
-    //       'type': 'Feature',
-    //       'properties': {
-    //         "dasharray": kirbyTransportToDashArray(legs[i].transport),
-    //         "legIndex": i + 1,
-    //       },
-    //       'geometry': geometry,
-    //     }
-    //     geojson.features.push(feature);
-    //     console.log("feature", feature)
-    //   }
-
-    //   return geojson;
-    // }
 
 
     function highlightLeg(index) {

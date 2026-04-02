@@ -1,0 +1,450 @@
+Title: M.
+
+----
+
+Age: 5
+
+----
+
+Sex: male
+
+----
+
+Datedeparture: 1993-06-05
+
+----
+
+Datearrival: 2018-08-17
+
+----
+
+Jobdeparture: 
+
+----
+
+Jobarrival: pizza maker
+
+----
+
+Departureplace: Parvan
+
+----
+
+Departurecountry: AF
+
+----
+
+Reasondeparture:
+
+«My family is of Hazara ethnicity, and when the Taliban arrived, we were afraid and fled to Iran. I was five years old.» 
+*[Historical note: In 2001, shortly before the destruction of the Buddhas of Bamiyan Valley, the Hazara suffered ethnic cleansing at the hands of the Taliban, which led to the complete disappearance of the community.]*
+
+----
+
+Departurelat: 35.01306
+
+----
+
+Departurelon: 69.16889
+
+----
+
+Legs:
+
+- 
+  place: Tehran
+  country: IR
+  lat: 35.68333
+  lon: 51.41667
+  transport: car
+  durationdays: 2
+  durationhours: ""
+  staydays: 7300
+  stayhours: ""
+  comments: "«In Iran, we couldn't go to school or do many jobs because we didn't have documents: we were always refugees. I liked working with fibreglass and I was a good footballer, but they told me, “You can't play because you're Afghan.” I thought about going back to Afghanistan, but there they told me I spoke Iranian. So I decided to leave for Europe: I was 26 years old.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Istanbul '
+  country: TR
+  lat: 41.01667
+  lon: 28.96667
+  transport: car
+  durationdays: 1
+  durationhours: ""
+  staydays: 240
+  stayhours: ""
+  comments: '«It was a very difficult journey: we were six people (my cousin and his family) in a small car, but it broke down and there was police everywhere. I stayed in Turkey for 8 months because I had to save money for the trip: it was a time when everyone was going to Europe and everything was still open.»'
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Dikili
+  country: TR
+  lat: 39.07074
+  lon: 26.88765
+  transport: car
+  durationdays: ""
+  durationhours: 5
+  staydays: ""
+  stayhours: 1
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Lesvos
+  country: GR
+  lat: 39.21
+  lon: 26.28
+  transport: boat
+  durationdays: ""
+  durationhours: 2
+  staydays: 3
+  stayhours: ""
+  comments: "«To go to Greece, I needed €1,000, but I didn't have it, so I arrived on the island of Lesbos on a small boat, where I was detained for three days. I got my documents and tickets to leave for Athens by ship.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Athens
+  country: GR
+  lat: 37.96667024
+  lon: 23.71667
+  transport: boat
+  durationdays: ""
+  durationhours: 12
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Diavata Refugee camp
+  country: GR
+  lat: 40.7118
+  lon: 22.895
+  transport: bus
+  durationdays: ""
+  durationhours: 8
+  staydays: 270
+  stayhours: ""
+  comments: "«I couldn't cross the border, so I was identified by the police and taken to the Diavata refugee camp (it was a new camp administered by the military).»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Sveti Nikole
+  country: MK
+  lat: 41.868353
+  lon: 21.941902
+  transport: car
+  durationdays: 1
+  durationhours: ""
+  staydays: 30
+  stayhours: ""
+  comments: "«I left again to go to Macedonia: my cousin and his family left for Germany by plane, but I didn't have enough money. It cost €800 to go to Macedonia.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Belgrade
+  country: RS
+  lat: 44.82056
+  lon: 20.46222
+  transport: car
+  durationdays: 2
+  durationhours: ""
+  staydays: 30
+  stayhours: ""
+  comments: >
+    «As soon as I had saved up the
+    necessary money, 500 euros, I left for
+    Serbia. It took two days because the car
+    broke down during the journey.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Šid - Refugee Camp'
+  country: RS
+  lat: 45.1189
+  lon: 19.221
+  transport: train
+  durationdays: ""
+  durationhours: 4
+  staydays: 30
+  stayhours: ""
+  comments: "«I had run out of money, so I had to find a way to continue on my own: I tried immediately, but at the train station the Croatian police stopped me, beat me up and took me back to the camp. I had a broken foot and couldn't leave right away, I had to wait.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Zagreb
+  country: HR
+  lat: 45.8
+  lon: 15.96667
+  transport: truck
+  durationdays: ""
+  durationhours: 12
+  staydays: ""
+  stayhours: ""
+  comments: '«I went to Croatia hiding under a truck. I got out for a moment when it stopped because I needed to pee, but the truck drove off, so I walked to a train station and boarded a train to Zagreb without a ticket. I wanted to take another train, but the police stopped me because I had no documents and took me to a camp called ‘*Hotel Porin’*.»'
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Hotel Porin (Center for Asylum Seekers)
+  country: HR
+  lat: 45.758
+  lon: 16.007
+  transport: car
+  durationdays: ""
+  durationhours: 1
+  staydays: 14
+  stayhours: ""
+  comments: "«They gave me documents that were only valid for 10 days, but I couldn't work, I couldn't do anything, so I tried to cross the border again: 4 attempts in 2 weeks, always hiding under a truck, but every time they took me back to the Hotel Porin because I was getting on trucks that didn't leave the country in the end. I was wrong.  The fifth attempt was successful and I arrived in Austria.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Austrian border
+  country: AT
+  lat: 46.7356
+  lon: 15.65668
+  transport: truck
+  durationdays: ""
+  durationhours: 4
+  staydays: ""
+  stayhours: ""
+  comments: "«The truck stops and I find myself in front of a large shop. I am covered in dirt. The police see me and stop me. They ask for my documents, but I don't have any, so they take me to a refugee camp.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Vienna - Traiskirchen Refugee Camp'
+  country: AT
+  lat: 48.20833
+  lon: 16.37306
+  transport: car
+  durationdays: ""
+  durationhours: 3
+  staydays: 10
+  stayhours: ""
+  comments: >
+    «They then transferred me to another
+    camp in Villach, where I stayed to work
+    and save some money.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Villach - Refugee Camp'
+  country: AT
+  lat: 46.6
+  lon: 13.83333
+  transport: car
+  durationdays: ""
+  durationhours: 6
+  staydays: 60
+  stayhours: ""
+  comments: >
+    «They transferred me to yet another
+    camp.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: 'Linz - Refugee Camp'
+  country: AT
+  lat: 48.23569
+  lon: 14.220608
+  transport: car
+  durationdays: ""
+  durationhours: 4
+  staydays: 270
+  stayhours: ""
+  comments: "«The police say I don't have the documents to stay and are sending me back to Croatia: I didn't resist and they took me to the plane.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Hotel Porin (Center for Asylum Seekers)
+  country: HR
+  lat: 45.758
+  lon: 16.007
+  transport: plane
+  durationdays: ""
+  durationhours: 6
+  staydays: 60
+  stayhours: ""
+  comments: >
+    «After about two months, I left to try
+    to cross the border into Slovenia
+    again.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: village
+  country: HR
+  lat: 45.89307
+  lon: 15.69455
+  transport: train
+  durationdays: ""
+  durationhours: 2
+  staydays: ""
+  stayhours: 10
+  comments: >
+    «I took a train and got off near the
+    border to avoid police checks. I stayed
+    there overnight and then crossed the
+    border on foot to the first railway
+    station in Slovenia.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Dobova Train Station
+  country: SI
+  lat: 45.90156045
+  lon: 15.65484468
+  transport: walk
+  durationdays: ""
+  durationhours: 5
+  staydays: ""
+  stayhours: 1
+  comments: >
+    «I bought a ticket to Ljubljana and
+    took the train.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Ljubljana
+  country: SI
+  lat: 46.0555
+  lon: 14.5083
+  transport: train
+  durationdays: ""
+  durationhours: 3
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: border train station
+  country: SI
+  lat: 45.70498
+  lon: 13.86528
+  transport: train
+  durationdays: ""
+  durationhours: 2
+  staydays: ""
+  stayhours: ""
+  comments: >
+    «I took the train again to a small
+    station near the border with Italy but
+    still in Slovenia, where I got off and
+    continued walking to Trieste during the
+    night.»
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Trieste
+  country: IT
+  lat: 45.65028
+  lon: 13.77028
+  transport: walk
+  durationdays: ""
+  durationhours: 5
+  staydays: ""
+  stayhours: ""
+  comments: "«I wanted to go to France, but I had run out of money because I had bought clothes: you can't go on the train with dirty clothes, otherwise they stop you immediately.»"
+  geojsonleg: ""
+  geojsonuse: 'false'
+
+----
+
+Text:
+
+“"I had to wait to work because I couldn't take courses or do anything else since I had been identified in Croatia. I should have returned to Croatia. Lawyers helped me, I waited eight months, and when the police were looking for me, I would go to another city for a while and then return to Trieste, until my obligation to Croatia expired and I applied for Italy. I entered the ICS reception centre and now I work in a pizzeria. They pay me very little: I have a contract for three hours a day for 600 euros, but I work many more hours and they pay me 400 euros. However, I need to work in order to stay. My dream is to go back to working with stone resin, but it's not easy because I have to take a course and there aren't any available at the moment. I like jobs where you make things with your hands: I have also made plaster sculptures using a spoon and fork.»
+"
+
+----
+
+Notes:
+
+Nome completo: Muhammad Eid
+
+@Alex:
+Tappa 4: per arrivare a Lesvos il percorso è chiaramente misto: car + boat (ho aggiunnto la tappa 3 Dekeli così si capisce meglio).
+
+----
+
+Storyimages: 
+
+----
+
+Blocks: 
+
+----
+
+Cachedsvg: <svg xmlns="http://www.w3.org/2000/svg" id="svg-map-target" viewBox="0 0 800 202.21697998046875" preserveAspectRatio="xMidYMid meet" width="800" height="800" x="0" y="0" class="geojson2svg-test" style="display: block;"><path d="M800,202.21698343521516 0,0" style="stroke:#44783b; fill: none;stroke-width:1.5px;" vector-effect="non-scaling-stroke"></path></svg>
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: true
+
+----
+
+Metadescription: 
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: true
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: default
+
+----
+
+Robotsfollow: default
+
+----
+
+Robotsarchive: default
+
+----
+
+Robotsimageindex: default
+
+----
+
+Robotssnippet: default
+
+----
+
+Metainherit: 
+
+----
+
+Uuid: pRrXpiKV0tB1q9q8
+
+----
+
+Updated: 2026-04-01 13:21:38

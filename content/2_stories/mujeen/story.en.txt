@@ -1,0 +1,220 @@
+Title: M.
+
+----
+
+Age: 19
+
+----
+
+Sex: male
+
+----
+
+Datedeparture: 2018-03-01
+
+----
+
+Datearrival: 2020-09-23
+
+----
+
+Jobdeparture: 
+
+----
+
+Jobarrival: 
+
+----
+
+Departureplace: Parvan
+
+----
+
+Departurecountry: AF
+
+----
+
+Reasondeparture: 
+
+----
+
+Departurelat: 35.01306
+
+----
+
+Departurelon: 69.16889
+
+----
+
+Legs:
+
+- 
+  place: Istanbul
+  country: TR
+  lat: 41.01667
+  lon: 28.96667
+  transport: car
+  durationdays: 14
+  durationhours: ""
+  staydays: 395
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Thessaloniki
+  country: GR
+  lat: 40.64028
+  lon: 22.93556
+  transport: car
+  durationdays: 10
+  durationhours: ""
+  staydays: 30
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Belgrade
+  country: RS
+  lat: 44.82056
+  lon: 20.46222
+  transport: car
+  durationdays: 7
+  durationhours: ""
+  staydays: 10
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Serajevo
+  country: BA
+  lat: 43.86667
+  lon: 18.41667
+  transport: car
+  durationdays: 2
+  durationhours: ""
+  staydays: 180
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Bihac
+  country: BA
+  lat: 44.81667
+  lon: 15.86667
+  transport: car
+  durationdays: ""
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+- 
+  place: Trieste
+  country: IT
+  lat: 45.65028
+  lon: 13.77028
+  transport: car
+  durationdays: 13
+  durationhours: ""
+  staydays: ""
+  stayhours: ""
+  comments: ""
+  geojsonleg: ""
+  geojsonuse: 'false'
+
+----
+
+Text: 
+
+----
+
+Notes: Nome completo: Mujeen
+
+----
+
+Storyimages: 
+
+----
+
+Blocks: 
+
+----
+
+Cachedsvg: <svg xmlns="http://www.w3.org/2000/svg" id="svg-map-target" viewBox="0 0 800 202.21697998046875" preserveAspectRatio="xMidYMid meet" width="800" height="800" x="0" y="0" class="geojson2svg-test" style="display: block;"><path d="M800,202.21698343521516 0,0" style="stroke:#44783b; fill: none;stroke-width:1.5px;" vector-effect="non-scaling-stroke"></path></svg>
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: true
+
+----
+
+Metadescription: 
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: true
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: default
+
+----
+
+Robotsfollow: default
+
+----
+
+Robotsarchive: default
+
+----
+
+Robotsimageindex: default
+
+----
+
+Robotssnippet: default
+
+----
+
+Metainherit: 
+
+----
+
+Uuid: IIXwfa3KF3BuWa1x
+
+----
+
+Updated: 2026-04-01 13:29:01

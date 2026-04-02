@@ -10,4 +10,7 @@ tabs:
   countries:
     extends: tabs/countries
 
+  transports:
+    extends: tabs/transports
+
   seo: seo/site

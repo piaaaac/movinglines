@@ -19,12 +19,15 @@ $style = $style ?? "large";
       $url = $story->url();
       $name = $story->title();
       $age = $story->age()->isNotEmpty() ? $story->age() : "";
-      $title = "$name, $age";
+      $title = "$name, $age y.o.";
       $from = getFromPlace($story);
       $fromCountry = getFromCountry($story);
+      $fromCountryCode = getFromCountryCode($story);
       $to = getToPlace($story);
       $toCountry = getToCountry($story);
+      $toCountryCode = getToCountryCode($story);
       $subtitle = "$from, $fromCountry → $to, $toCountry";
+      $subtitleShort = "$from, $fromCountryCode → $to, $toCountryCode";
     ?>
 
       <?php if ($style === "large"): ?>
@@ -48,7 +51,8 @@ $style = $style ?? "large";
                 <div></div>
                 <div>
                   <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                  <div class="font-sans-m color-grey outlined-page_bg_color"><?= $subtitle ?></div>
+                  <div class="font-sans-m d-none d-md-block color-grey outlined-page_bg_color"><?= $subtitle ?></div>
+                  <!-- <div class="font-sans-m d-none d-md-block color-grey outlined-page_bg_color"><?= $subtitleShort ?></div> -->
                 </div>
               </div>
             </div>
@@ -71,7 +75,8 @@ $style = $style ?? "large";
               <div class="col-6 col-sm-9 col-xl-6 align-self-center">
                 <div class="story-details color-black mb-4">
                   <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                  <div class="font-sans-m color-grey outlined-page_bg_color"><?= $subtitle ?></div>
+                  <div class="font-sans-m color-grey outlined-page_bg_color d-none d-md-block"><?= $subtitle ?></div>
+                  <div class="font-sans-m color-grey outlined-page_bg_color d-md-none"><?= $subtitleShort ?></div>
                 </div>
               </div>
             </div>

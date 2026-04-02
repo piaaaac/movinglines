@@ -1,0 +1,32 @@
+label: Transports
+icon: car
+
+columns:
+  - width: 1/1
+    fields:
+      transports:
+        label: Transports list
+        type: structure
+        sortBy: id asc
+        fields:
+          id:
+            label: ID
+            type: slug
+            allow: a-z_
+            width: 1/3
+            font: monospace
+          text:
+            label: Text
+            type: text
+            before: "Traveled by"
+            width: 1/3
+          lineType:
+            label: Line type
+            type: select
+            width: 1/3
+            options:
+              - walk
+              - sea
+              - ground
+              - air
+              - other

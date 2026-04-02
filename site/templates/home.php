@@ -1,5 +1,5 @@
 <?php
-$stories = page("stories")->children()->listed()->limit(6);
+$stories = page("stories")->children()->listed();
 $articles = page("articles")->children()->listed()->limit(3);
 ?>
 
@@ -21,14 +21,20 @@ $articles = page("articles")->children()->listed()->limit(3);
 
 <div class="spacer py-4"></div>
 
-<?php /* snippet("stories-prev", ["stories" => $stories]) */ ?>
-<?php snippet("stories-prev-2", ["stories" => $stories]) ?>
+<?php snippet("grid-test", ["stories" => $stories->limit(10)]) ?>
+
+<?php /* 
+<div class="spacer py-4"></div>
+<?php snippet("stories-prev-2", ["stories" => $stories->limit(6)]) ?>
+*/ ?>
 
 <div class="full-w-btn">
   <a href="<?= page("stories")->url() ?>">
     <?php
-    $text = "    See all stories →    ";
-    echo $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text;
+    // $text = "    See all stories →    ";
+    // echo $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text;
+    $text = "    See all lines →    ";
+    echo $text;
     ?>
   </a>
 </div>
@@ -61,12 +67,17 @@ $articles = page("articles")->children()->listed()->limit(3);
 <section id="about">
   <div class="container-fluid texts">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-6 mb-5">
         <div class="block-font-sans-m">
           <?= $page->textAbout() ?>
         </div>
+        <div class="mt-3">
+          <a href="<?= page("about")->url() ?>" class="button small green-light px-3">
+            READ MORE ABOUT THE PROJECT
+          </a>
+        </div>
       </div>
-      <div class="col-lg-4 offset-lg-2">
+      <div class="col-lg-4 offset-lg-2 mb-5">
         <div class="block-font-sans-s">
           <?= $page->textAboutAuthors() ?>
         </div>

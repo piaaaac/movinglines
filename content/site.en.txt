@@ -266,11 +266,8 @@ Countries:
   code: KI
   name: Kiribati
 - 
-  code: KP
-  name: North Korea
-- 
-  code: KR
-  name: South Korea
+  code: XK
+  name: Kosovo
 - 
   code: KW
   name: Kuwait
@@ -383,6 +380,9 @@ Countries:
   code: NG
   name: Nigeria
 - 
+  code: KP
+  name: North Korea
+- 
   code: MK
   name: North Macedonia
 - 
@@ -482,6 +482,9 @@ Countries:
   code: ZA
   name: South Africa
 - 
+  code: KR
+  name: South Korea
+- 
   code: ES
   name: Spain
 - 
@@ -580,6 +583,56 @@ Countries:
 - 
   code: ZW
   name: Zimbabwe
+
+----
+
+Transports:
+
+- 
+  id: boat
+  text: boat
+  linetype: sea
+- 
+  id: bus
+  text: bus
+  linetype: ground
+- 
+  id: car
+  text: car
+  linetype: ground
+- 
+  id: freight_train
+  text: freight train
+  linetype: ground
+- 
+  id: minibus
+  text: minibus
+  linetype: ground
+- 
+  id: plane
+  text: plane
+  linetype: air
+- 
+  id: police_car
+  text: police car
+  linetype: ground
+- 
+  id: taxi
+  text: taxi
+  linetype: ground
+- 
+  id: train
+  text: train
+  linetype: ground
+- 
+  id: truck
+  text: truck
+  linetype: ground
+- 
+  id: walk
+  text: walk
+  linetype: walk
+  name: walk
 
 ----
 

@@ -13,11 +13,11 @@ $stories = page("stories")->children()->listed();
     <div class="col-12">
       <?php foreach ($page->children()->listed() as $child): ?>
         <?php foreach ($child->tags()->split(",") as $tag) : ?>
-          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary"><?= trim($tag) ?></a>
+          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
         <?php endforeach ?>
 
         <?php foreach ($child->places()->split(",") as $tag) : ?>
-          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary"><?= trim($tag) ?></a>
+          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
         <?php endforeach ?>
 
         <h1>
