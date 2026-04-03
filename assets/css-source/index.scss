@@ -299,11 +299,10 @@ img.cover-image {
 .full-w-btn {
   overflow: hidden;
   position: relative;
-  background-color: black;
   color: white;
   height: $menu-h;
   transition: background-color 170ms;
-  background-color: black;
+  background-color: darken($bg_color_darkest, 5%);
   color: white;
   margin-left: 30px;
   margin-right: 30px;
@@ -329,7 +328,11 @@ img.cover-image {
     top: 0;
     bottom: 0;
     width: 50px;
-    background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+    background: linear-gradient(
+      to right,
+      darken($bg_color_darkest, 15%),
+      rgba(darken($bg_color_darkest, 15%), 0)
+    );
     z-index: 1;
   }
   &::after {

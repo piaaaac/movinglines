@@ -1,12 +1,12 @@
-<?php
-$stories = page("stories")->children()->listed();
-?>
-
 <?php snippet("header", ["tallMenu" => true]) ?>
 
 <?php snippet("menu", ["subtitle" => "Stories crossing borders"]) ?>
 
 <div class="space-large"></div>
+
+<div class="blocks"><?= $page->blocks()->toBlocks() ?></div>
+
+<div class="my-5"></div>
 
 <div class="container-fluid texts">
   <div class="row">

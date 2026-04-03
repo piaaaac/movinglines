@@ -13,6 +13,9 @@ tabs:
                 label: Breadcrumb text
                 help: This text will be used in the breadcrumb navigation.
 
+              blocks:
+                extends: fields/content_blocks
+
           items:
             headline: Pages
             type: pages

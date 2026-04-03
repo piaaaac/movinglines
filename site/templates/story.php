@@ -118,24 +118,36 @@ if ((int)$totals["totalDays"] > 60) {
 <section id="about" class="mt-5">
   <div class="container-fluid texts">
     <div class="row">
-      <div class="col-lg-6">
-        <h5 class="mb-4"><?= $page->title() ?>’s trip</h5>
 
+      <div class="col-12">
+        <!-- Small title -->
+        <h5 class="mb-4"><?= $page->title() ?>’s trip</h5>
+      </div>
+
+      <?php if ($page->text()->isNotEmpty()): ?>
+        <div class="col-lg-6">
+          <!-- Citazione / testo -->
+          <div class="mb-4 font-ser-m"><?= $page->text()->kt() ?></div>
+        </div>
+      <?php endif ?>
+
+      <div class="col-lg-5<?= $page->text()->isNotEmpty() ? ' offset-lg-1' : '' ?>">
+
+        <!-- Data recap paragraph -->
         <div class="font-sans-s">
           <?= $page->title() ?> travelled by <?= implode(", ", $totals["transports"]) ?> and passed through <?= count($totals["countries"]) ?> countries: <?= implode(", ", $totals["countries"]) ?>.
           The trip lasted in total <?= round($totals["totalDays"]) ?> days, <?= round($totals["travelDays"]) ?> of which spent traveling and <?= round($totals["stayDays"]) ?> of which spent staying in places.
         </div>
 
+        <!-- Data pallini -->
         <div class="mt-4">
-          <img src="<?= $kirby->url("assets") ?>/images/legend-days-line.svg" />
+          <div>
+            <img src="<?= $kirby->url("assets") ?>/images/legend-days-line.svg" />
+          </div>
+          <div class="trip-symbols mt-2 mb-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
+            <?= implode(" ", $totals["daysSequence"]) ?>
+          </div>
         </div>
-
-        <div class="trip-symbols mt-2 mb-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
-          <?= implode(" ", $totals["daysSequence"]) ?>
-        </div>
-
-        <div class="my-4 font-ser-m"><?= $page->text()->kt() ?></div>
-
       </div>
 
       <?php

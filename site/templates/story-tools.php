@@ -1,6 +1,5 @@
 <?php
-// $lineColor = "#006600"; // --- darker color that works well for lines in HP
-$lineColor = "#44783b"; // --- last green_fraga
+$green_fraga_darker = "#1a3425";
 
 if (!$kirby->user()) {
   die("You must log in to see this page. <a href='" . url('/panel') . "'>Do</a>");
@@ -386,7 +385,7 @@ $stateLabel = [
           'line-cap': 'round',
         },
         'paint': {
-          'line-color': '<?= $lineColor ?>',
+          'line-color': '<?= $green_fraga_darker ?>',
           'line-width': 3,
           'line-dasharray': ['get', 'dasharray'],
         }
@@ -538,7 +537,7 @@ $stateLabel = [
           height: 800
         },
         attributes: {
-          'style': 'stroke:<?= $lineColor ?>; fill: none;stroke-width:1.5px;',
+          'style': 'stroke:<?= $green_fraga_darker ?>; fill: none;stroke-width:1.5px;',
           'vector-effect': 'non-scaling-stroke',
         },
         explode: false,
@@ -913,11 +912,11 @@ $stateLabel = [
     function highlightLeg(index) {
       if (index === null) {
         // All segments fully visible
-        map.setPaintProperty('route', 'line-color', "<?= $lineColor ?>");
+        map.setPaintProperty('route', 'line-color', "<?= $green_fraga_darker ?>");
       } else {
         // Dim all segments except the active one
         map.setPaintProperty('route', "line-color", [
-          "case", ["==", ["get", "legIndex"], index], "<?= $lineColor ?>", "rgba(173, 173, 160, 0.5)",
+          "case", ["==", ["get", "legIndex"], index], "<?= $green_fraga_darker ?>", "rgba(173, 173, 160, 0.5)",
         ]);
       }
 
