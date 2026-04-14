@@ -12,16 +12,17 @@ place
   tripLonTo:      23.938087
   tripPlaceFrom:  "small town"
   tripPlaceTo:    "small town"
-  tripTransport:  car"
+  tripCountryTo:  "Romania"
+  tripTransport:  "car"
 -->
 <script id="hb-popup" type="text/x-handlebars-template">
   <div class="story-leg-info pb-1 my-1">
     <div class="story-header">
-      <h2 class="font-sans-m font-weight-400 mb-1"><span class="double-dot"></span> {{place.name}}</h2>
+      <h2 class="font-sans-s font-weight-600 mb-1"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2>
     </div>    
     {{#if place.tripPlaceFrom}}
       <p class="m-0 font-sans-s color-grey">
-        &rarr; from {{place.tripPlaceFrom}}
+        <!-- &rarr; from {{place.tripPlaceFrom}} -->
         {{#if place.tripTransport}}
           by {{place.tripTransport}}
         {{/if}}
@@ -45,7 +46,7 @@ stats
 <script id="hb-leginfocontents" type="text/x-handlebars-template">
   <div class="box-wrapper" style="width: 300px;">
     <div class="box my-1">
-      <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}</h2>
+      <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2>
 
       <div class="font-sans-s mb-2">
         Traveled

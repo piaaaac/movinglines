@@ -151,6 +151,9 @@ if ((int)$totals["totalDays"] > 60) {
       </div>
 
       <?php
+      // section for images, only if there are any
+
+      /*  
       $images = $page->storyImages()->toFiles();
       $imgNum = $images->count();
       if ($imgNum > 0):
@@ -163,7 +166,10 @@ if ((int)$totals["totalDays"] > 60) {
             <?php endforeach; ?>
           </div>
         </div>
-      <?php endif ?>
+      <?php 
+      endif;
+      */
+      ?>
 
     </div>
   </div>
@@ -173,6 +179,14 @@ if ((int)$totals["totalDays"] > 60) {
 </section>
 
 <script>
+  var countries = <?= json_encode(site()->countries()->toStructure()->toArray()) ?>;
+  console.log("countries", countries);
+
+  function countryCodeToName(code) {
+    var country = countries.find(c => c.code == code);
+    return country ? country.name : code;
+  }
+
   function getColor1(bool) {
     return bool ? cd : cl;
   }
@@ -538,7 +552,7 @@ if ((int)$totals["totalDays"] > 60) {
   // --------------------------------
 
   function getStoryPlacesFromKirbyData(kirbyData) {
-
+    console.log("getStoryPlacesFromKirbyData", kirbyData)
     // --- data from kirby
     var startLon = +kirbyData.departurelon;
     var startLat = +kirbyData.departurelat;
@@ -584,6 +598,9 @@ if ((int)$totals["totalDays"] > 60) {
         "tripComments": leg.comments,
         "tripPlaceFrom": placeFrom,
         "tripPlaceTo": leg.place,
+
+        "tripCountryTo": countryCodeToName(leg.country),
+
         "tripLonFrom": lonFrom,
         "tripLatFrom": latFrom,
         "tripLonTo": leg.lon,
