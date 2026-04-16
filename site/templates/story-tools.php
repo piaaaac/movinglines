@@ -1,5 +1,7 @@
 <?php
-$green_fraga_darker = "#1a3425";
+// COLOR_DEFS_
+// $green_fraga_darker = "#1a3425";
+$green_fraga_darker = "#0f521d";
 
 if (!$kirby->user()) {
   die("You must log in to see this page. <a href='" . url('/panel') . "'>Do</a>");

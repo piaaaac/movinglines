@@ -19,6 +19,7 @@ $tallMenu = $tallMenu ?? false;
 
   <?php snippet('seo/head'); ?>
   <!-- <?php snippet("favicon") ?> -->
+  <?php snippet("analytics") ?>
   <?php snippet("load-scripts") ?>
 
   <script>

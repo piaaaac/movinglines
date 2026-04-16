@@ -1,8 +1,16 @@
 <?php
-$green_fraga_lighter = "#376349";
-$green_fraga_darker = "#1a3425";
+
+// COLOR_DEFS_
+$green_fraga_lighter = "#0f521d";
+$green_fraga_darker = "#0f521d";
+// $green_fraga_lighter = "#844DC8";
+// $green_fraga_darker = "#844DC8";
+
+// $page_bg_color_lighter = "#eef1f5";
+// $page_bg_color_darker = "#ced8eb";
+$page_bg_color_lighter = "#EFF6FF";
 $page_bg_color_darker = "#ced8eb";
-$page_bg_color_lighter = "#eef1f5";
+$page_bg_color_darker = "#c0d4e3";
 
 // --- Prepare nav data
 
@@ -102,7 +110,7 @@ if ((int)$totals["totalDays"] > 60) {
     </div>
   </div>
   <div class="map-legend">
-    <img src="<?= $kirby->url("assets") ?>/images/legend-lines.svg" />
+    <img src="<?= $kirby->url("assets") . '/images/legend-lines.svg?v=' . option('assets.version') ?>" />
   </div>
 </section>
 
@@ -142,7 +150,7 @@ if ((int)$totals["totalDays"] > 60) {
         <!-- Data pallini -->
         <div class="mt-4">
           <div>
-            <img src="<?= $kirby->url("assets") ?>/images/legend-days-line.svg" />
+            <img src="<?= $kirby->url("assets") . '/images/legend-days-line.svg?v=' . option('assets.version') ?>" />
           </div>
           <div class="trip-symbols mt-2 mb-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
             <?= implode(" ", $totals["daysSequence"]) ?>
@@ -368,6 +376,12 @@ if ((int)$totals["totalDays"] > 60) {
       lineColor, // match → highlight
       "rgba(173, 173, 160, 0.8)" // otherwise → grey
     ];
+    var lineOpacityRule = [
+      "case",
+      ["==", ["get", "tripTransport"], "plane"],
+      0.25, // match → make opaque
+      1 // otherwise → full opacity
+    ];
     var circleOpacityRule = [
       "case", ["==", ["get", "legIndex"], state.activeLegIndex - 1], 1, 0
     ];
@@ -388,7 +402,7 @@ if ((int)$totals["totalDays"] > 60) {
         "line-width": lineWidthRule,
         "line-dasharray": ["get", "dasharray"],
         "line-color": lineColorRule,
-        "line-opacity": 1,
+        "line-opacity": lineOpacityRule,
       }
     });
 
@@ -541,6 +555,20 @@ if ((int)$totals["totalDays"] > 60) {
 
 
   // --------------------------------
+  // Debug properties metadata in routeDS features
+  // --------------------------------
+
+  // setTimeout(() => {
+  //   console.log("~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ debug: features in routeDS");
+  //   const features = map.querySourceFeatures('routeDS', {
+  //     sourceLayer: 'route'
+  //   });
+  //   features.forEach(f => {
+  //     console.log(f.properties);
+  //   });
+  // }, 3000);
+
+  // --------------------------------
   // Handle map visibility
   // --------------------------------
 
@@ -567,6 +595,7 @@ if ((int)$totals["totalDays"] > 60) {
       "lat": startLat,
       "index": 0,
       "isValidPlace": startPlaceIsValid,
+      "tripCountryTo": countryCodeToName(kirbyData.departurecountry),
     }
     var places = [firstPlace];
     for (var i = 0; i < legs.length; i++) {
@@ -655,6 +684,7 @@ if ((int)$totals["totalDays"] > 60) {
         'properties': {
           "legIndex": place.index,
           "dasharray": dashArray,
+          "tripTransport": place.tripTransport,
         },
         'geometry': geometry,
       }
@@ -691,7 +721,7 @@ if ((int)$totals["totalDays"] > 60) {
   }
 
   function paddingValues() {
-    var margin = Math.max(window.innerWidth * 0.07, 100);
+    var margin = Math.min(window.innerWidth * 0.07, 100);
     return {
       top: margin,
       bottom: margin,

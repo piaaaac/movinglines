@@ -91,7 +91,7 @@ stats
           {{/repeat}}
         </div>
         <div class="my-2">
-          <img src="<?= $kirby->url("assets") ?>/images/legend-days-line-short.svg" />
+          <img src="<?= $kirby->url("assets") . '/images/legend-days-line-short.svg?v=' . option('assets.version') ?>" />
         </div>
 
         <a id="close-leg-button" class="pointer" onclick="navigationAction('close-leg');">&times;</a>

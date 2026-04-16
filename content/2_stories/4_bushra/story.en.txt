@@ -37,7 +37,7 @@ Departurecountry: IQ
 Reasondeparture:
 
 «In April 2014, I left Sinjar with my husband and our two children to escape the offensive of Daesh (the Arabic acronym for Islamic State of Iraq and the Levant, ISIL). We moved north to Zakho, but after two difficult years without work, we had nothing and didn't know what to do. We decided to leave for Europe in the hope of finding a chance.»
-*(August 2014: Sinjar massacre) *
+<small>(August 2014: (link: https://www.nadiasinitiative.org/the-genocide text: Sinjar massacre target: _blank))</small>
 
 ----
 
@@ -177,7 +177,6 @@ Notes:
 
 nome intero: Bushra
 ---
-👍🏼
 @Alex: ho cercato documenti sullo sbarco di quell'anno e trovato la rotta. Ti ho aggiunto il porto di partenza Izmir e calcolato i tempi di spostamento secondo quanto appreso.
 
 ----
@@ -270,4 +269,4 @@ Uuid: wfvdpn2XQM1Rf26Q
 
 ----
 
-Updated: 2026-03-31 20:41:51
+Updated: 2026-04-16 16:21:10

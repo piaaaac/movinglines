@@ -13,7 +13,7 @@
       <div class="col-12 mb-3">
         <p class="font-sans-s">
           Moving Lines: Stories Crossing Borders is an independent project.
-          <br />Want to contribute? <a href="">Get in touch.</a>
+          <br />Want to contribute? <a href="mailto:movinglinesproject@gmail.com">Get in touch.</a>
         </p>
       </div>
     </div>
