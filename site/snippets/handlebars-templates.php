@@ -18,7 +18,14 @@ place
 <script id="hb-popup" type="text/x-handlebars-template">
   <div class="story-leg-info pb-1 my-1">
     <div class="story-header">
-      <h2 class="font-sans-s font-weight-600 mb-1"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2>
+      
+      <!-- <h2 class="font-sans-s font-weight-600 mb-1"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2> -->
+      
+      <h2 class="font-sans-s font-weight-600 mb-1">
+        <span>{{place.name}}</span>{{#if place.tripCountryTo}}<span>, {{place.tripCountryTo}}</span>{{/if}}        
+      </h2>
+    
+    
     </div>    
     {{#if place.tripPlaceFrom}}
       <p class="m-0 font-sans-s color-grey">
@@ -52,7 +59,9 @@ stats
     </div>
 
     <div class="box my-1">
-      <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2>
+      <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span>
+        <span>{{place.name}}</span>{{#if place.tripCountryTo}}<span>, {{place.tripCountryTo}}</span>{{/if}}
+      </h2>
 
       <div class="font-sans-s mb-2">
         Traveled

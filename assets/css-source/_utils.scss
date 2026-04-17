@@ -86,6 +86,10 @@
 
 .outlined-page_bg_color {
   @include text-outline(var(--bg-color), 1px);
+  // @include text-outline(green, 1px);
+}
+.outlined-hover-hardcoded_color {
+  @include text-outline(red, 1px);
 }
 
 // -----------------------------------------------------------------------------

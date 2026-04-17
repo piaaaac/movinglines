@@ -67,9 +67,9 @@ $style = $style ?? "large";
               </div>
               <div class="col-8 col-sm-9 col-xl-6 align-self-center">
                 <div class="story-details color-black mb-4">
-                  <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                  <div class="font-sans-s color-grey outlined-page_bg_color d-none d-md-block"><?= $subtitle ?></div>
-                  <div class="font-sans-s color-grey outlined-page_bg_color d-md-none"><?= $subtitleShort ?></div>
+                  <div class="font-ser-l font-w-600 mb-1"><?= $title ?></div>
+                  <div class="font-sans-s color-grey d-none d-md-block"><?= $subtitle ?></div>
+                  <div class="font-sans-s color-grey d-md-none"><?= $subtitleShort ?></div>
                 </div>
               </div>
             </div>
