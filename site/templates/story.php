@@ -1,16 +1,17 @@
 <?php
 
 // COLOR_DEFS_
-$green_fraga_lighter = "#0f521d";
-$green_fraga_darker = "#0f521d";
+// $green_fraga_lighter = "#0f521d";
+// $green_fraga_darker = "#0f521d";
 // $green_fraga_lighter = "#844DC8";
 // $green_fraga_darker = "#844DC8";
+$green_fraga_lighter = "#6c4c87";
+$green_fraga_darker = "#6c4c87";
 
-// $page_bg_color_lighter = "#eef1f5";
-// $page_bg_color_darker = "#ced8eb";
-$page_bg_color_lighter = "#EFF6FF";
-$page_bg_color_darker = "#ced8eb";
-$page_bg_color_darker = "#c0d4e3";
+// $page_bg_color_lighter = "#eff6ff";
+// $page_bg_color_darker = "#c0d4e3";
+$page_bg_color_lighter = "#eff6ff";
+$page_bg_color_darker = "#bfd9ec";
 
 // --- Prepare nav data
 
