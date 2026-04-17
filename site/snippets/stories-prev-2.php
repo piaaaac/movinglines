@@ -34,25 +34,17 @@ $style = $style ?? "large";
 
         <div class="col-sm-6 col-xl-4">
           <a href="<?= $url ?>" class="d-block">
-            <div class="svg-square-container p-5 mb-3 mt-1">
-              <?php if ($story->cachedSvg()->isNotEmpty()): ?>
-                <?= $story->cachedSvg()->value() ?>
-              <?php endif ?>
-
-              <?php /*  TOP-BOTTOM VERSION
-              <div class="absolute-story-info">
-                <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                <div class="font-sans-m color-grey"><?= $subtitle ?></div>
-              </div>
-              */ ?>
-
-              <?php /*  ALL BOTTOM VERSION */ ?>
-              <div class="absolute-story-info">
-                <div></div>
-                <div>
-                  <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                  <div class="font-sans-m d-none d-md-block color-grey outlined-page_bg_color"><?= $subtitle ?></div>
-                  <!-- <div class="font-sans-m d-none d-md-block color-grey outlined-page_bg_color"><?= $subtitleShort ?></div> -->
+            <div class="svg-square-container mb-3 mt-1">
+              <div class="pad p-5">
+                <?php if ($story->cachedSvg()->isNotEmpty()): ?>
+                  <?= $story->cachedSvg()->value() ?>
+                <?php endif ?>
+                <div class="absolute-story-info">
+                  <div></div>
+                  <div>
+                    <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
+                    <div class="font-sans-m d-none d-md-block color-grey outlined-page_bg_color"><?= $subtitle ?></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -61,22 +53,23 @@ $style = $style ?? "large";
 
       <?php elseif ($style === "small"): ?>
 
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <a href="<?= $url ?>" class="d-block no-u story-prev-small">
             <div class="row">
-              <div class="col-6 col-sm-3 col-xl-4">
-                <div class="svg-square-container padding-proportional-s mb-3 mt-1">
-                  <!-- <div class="svg-square-container p-4 p-sm-3 p-md-4 mb-3 mt-1"> -->
-                  <?php if ($story->cachedSvg()->isNotEmpty()): ?>
-                    <?= $story->cachedSvg()->value() ?>
-                  <?php endif ?>
+              <div class="col-4 col-sm-3 col-xl-4">
+                <div class="svg-square-container mb-2 mb-md-3 mt-1">
+                  <div class="pad padding-proportional-s">
+                    <?php if ($story->cachedSvg()->isNotEmpty()): ?>
+                      <?= $story->cachedSvg()->value() ?>
+                    <?php endif ?>
+                  </div>
                 </div>
               </div>
-              <div class="col-6 col-sm-9 col-xl-6 align-self-center">
+              <div class="col-8 col-sm-9 col-xl-6 align-self-center">
                 <div class="story-details color-black mb-4">
                   <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                  <div class="font-sans-m color-grey outlined-page_bg_color d-none d-md-block"><?= $subtitle ?></div>
-                  <div class="font-sans-m color-grey outlined-page_bg_color d-md-none"><?= $subtitleShort ?></div>
+                  <div class="font-sans-s color-grey outlined-page_bg_color d-none d-md-block"><?= $subtitle ?></div>
+                  <div class="font-sans-s color-grey outlined-page_bg_color d-md-none"><?= $subtitleShort ?></div>
                 </div>
               </div>
             </div>

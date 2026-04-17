@@ -497,12 +497,14 @@ img.cover-image {
   backdrop-filter: blur(3px);
   transition: all 200ms;
   cursor: pointer;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
   &:hover {
     text-decoration: none;
     background-color: white;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   }
-
   &::before {
     content: "Read more";
     display: block;
@@ -636,8 +638,18 @@ section.map-area {
   position: relative;
   #map-container {
     height: calc(100dvh - 105px);
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      height: auto;
+    }
   }
   .info {
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      top: 0;
+      margin: 15px 0;
+    }
     z-index: 3;
     position: absolute;
     top: 20px;
@@ -646,8 +658,13 @@ section.map-area {
       .box-wrapper {
         // <-- will contain width
         position: relative;
+        width: 300px;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
         .box {
           // width: 300px;
+          position: relative;
           background-color: white;
           padding: 10px 15px;
           border-radius: 7px;
@@ -767,20 +784,25 @@ section.map-area {
   $gutter: 20px;
   $maxw: 650px;
   // background-color: green;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(0, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: $gutter;
-  padding: 0 30px;
   max-width: 1800px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-height: calc(((100vw - 45px)) * 3);
+  max-height: calc(((100vw - 15px)) * 3);
   overflow: hidden;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: $gutter;
+
+  @media (min-width: 520px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
   /* Tablet: show 3 rows */
   @media (min-width: 640px) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    padding: 0 30px;
     max-height: calc(100vw - 60px);
   }
 
@@ -834,9 +856,9 @@ section.map-area {
     justify-content: space-between;
     align-items: stretch;
   }
-  &.padding-proportional-s {
-    padding: 10%;
-  }
+}
+.padding-proportional-s {
+  padding: 10%;
 }
 
 .story-prev-small {

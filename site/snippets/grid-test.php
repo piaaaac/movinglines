@@ -26,24 +26,17 @@
   ?>
     <div class="lines-grid-item">
       <a href="<?= $url ?>" class="d-block">
-        <div class="svg-square-container p-5">
-          <?php if ($story->cachedSvg()->isNotEmpty()): ?>
-            <?= $story->cachedSvg()->value() ?>
-          <?php endif ?>
-
-          <?php /*  TOP-BOTTOM VERSION
-              <div class="absolute-story-info">
-                <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-                <div class="font-sans-m color-grey"><?= $subtitle ?></div>
+        <div class="svg-square-container">
+          <div class="pad padding-proportional-s">
+            <?php if ($story->cachedSvg()->isNotEmpty()): ?>
+              <?= $story->cachedSvg()->value() ?>
+            <?php endif ?>
+            <div class="absolute-story-info">
+              <div></div>
+              <div>
+                <div class="font-ser-l font-w-600 outlined-page_bg_color"><?= $title ?></div>
+                <div class="font-sans-s color-grey outlined-page_bg_color mt-1 d-none d-sm-block"><?= $subtitle ?></div>
               </div>
-              */ ?>
-
-          <?php /*  ALL BOTTOM VERSION */ ?>
-          <div class="absolute-story-info">
-            <div></div>
-            <div>
-              <div class="font-ser-l font-w-600 mb-1 outlined-page_bg_color"><?= $title ?></div>
-              <div class="font-sans-s color-grey outlined-page_bg_color"><?= $subtitle ?></div>
             </div>
           </div>
         </div>

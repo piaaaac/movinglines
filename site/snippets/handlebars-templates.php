@@ -44,7 +44,13 @@ stats
   noTripData - number
 -->
 <script id="hb-leginfocontents" type="text/x-handlebars-template">
-  <div class="box-wrapper" style="width: 300px;">
+  <div class="box-wrapper"> <!-- style="width: 300px;" -->
+
+    <div class="action-buttons mb-3 mb-1 d-md-none">
+      <a class="button small green-light one-of-two" onclick="navigationAction('highlight-prev-leg');">Prev</a>
+      <a class="button small green-light one-of-two" onclick="navigationAction('highlight-next-leg');">Next</a>
+    </div>
+
     <div class="box my-1">
       <h2 class="font-sans-m font-weight-600 mr-2 mb-2"><span class="double-dot"></span> {{place.name}}, {{place.tripCountryTo}}</h2>
 
@@ -61,11 +67,6 @@ stats
       {{/if}}
 
       <div class="stats mt-3">
-        <!--  
-          <div class="font-sans-s">Transport: {{place.tripTransport}}</div>
-          <div class="bar"><div class="fill" style="width: {{bars.transport}}%;"></div></div>
-          -->
-        <!-- <div class="bar"><div class="fill" style="width: {{bars.trip}}%;"></div></div> -->
         
         <div class="font-sans-s">
           {{#if stats.noTripData}}
@@ -91,13 +92,14 @@ stats
           {{/repeat}}
         </div>
         <div class="my-2">
-          <img src="<?= $kirby->url("assets") . '/images/legend-days-line-short.svg?v=' . option('assets.version') ?>" />
+          <img style="max-width: 100%;" 
+          src="<?= $kirby->url("assets") . '/images/legend-days-line-short.svg?v=' . option('assets.version') ?>" />
         </div>
 
         <a id="close-leg-button" class="pointer" onclick="navigationAction('close-leg');">&times;</a>
       </div>
 
-      <div class="action-buttons mt-4 mb-1">
+      <div class="action-buttons mt-4 mb-1 d-none d-md-flex">
         <a class="button small green-light one-of-two" onclick="navigationAction('highlight-prev-leg');">Prev</a>
         <a class="button small green-light one-of-two" onclick="navigationAction('highlight-next-leg');">Next</a>
       </div>
@@ -120,7 +122,10 @@ quote – string
 name – string
 -->
 <script id="hb-storyinfocontents" type="text/x-handlebars-template">
-  <div class="box-wrapper" style="width: 220px;">
+  <div class="mb-3 d-md-none">
+    <a class="button small green-light w-100" onclick="navigationAction('start-story');">Explore {{name}}'s trip</a>
+  </div>
+  <div class="box-wrapper"> <!-- style="width: 220px;" -->
     <div class="box my-1">
       <!-- <h2 class="font-sans-m">{{title}}</h2> -->
       {{#if text}}
@@ -130,7 +135,7 @@ name – string
         <p class="m-0 mt-3 mb-2 font-ser-m">{{{quote}}}</p>
       {{/if}}
     </div>
-    <div class="action-buttons">
+    <div class="action-buttons d-none d-md-flex">
       <a class="button small green-light" onclick="navigationAction('start-story');">Explore {{name}}'s trip</a>
     </div>
   </div>

@@ -70,9 +70,11 @@ $items = [
             <?php if ($page->template()->name() === "story"): ?>
               <span> / </span>
               <span>
-                <?= $page->title() ?></span><span><?= $page->age()->isNotEmpty() ? ", " . $page->age() : "" ?>
-                <span class="d-sm-none">y.o.</span>
-                <span class="d-none d-sm-inline">years old</span>
+                <?= $page->title() ?></span><span><?= $page->age()->isNotEmpty() ? ", " : "" ?>
+                <?php if ($page->age()->isNotEmpty()): ?>
+                  <span class="d-sm-none">left at <?= $page->age() ?></span>
+                  <span class="d-none d-sm-inline">left at <?= $page->age() ?> years old</span>
+                <?php endif ?>
               </span>
             <?php endif ?>
           </h2>

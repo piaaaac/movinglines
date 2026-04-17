@@ -110,7 +110,8 @@ if ((int)$totals["totalDays"] > 60) {
     </div>
   </div>
   <div class="map-legend">
-    <img src="<?= $kirby->url("assets") . '/images/legend-lines.svg?v=' . option('assets.version') ?>" />
+    <img style="max-width: 100%;"
+      src="<?= $kirby->url("assets") . '/images/legend-lines.svg?v=' . option('assets.version') ?>" />
   </div>
 </section>
 
@@ -150,7 +151,8 @@ if ((int)$totals["totalDays"] > 60) {
         <!-- Data pallini -->
         <div class="mt-4">
           <div>
-            <img src="<?= $kirby->url("assets") . '/images/legend-days-line.svg?v=' . option('assets.version') ?>" />
+            <img style="max-width: 100%;"
+              src="<?= $kirby->url("assets") . '/images/legend-days-line.svg?v=' . option('assets.version') ?>" />
           </div>
           <div class="trip-symbols mt-2 mb-4" data-style="<?= $tripDotsSize ?>" style="letter-spacing: -0.1em;">
             <?= implode(" ", $totals["daysSequence"]) ?>
@@ -722,10 +724,12 @@ if ((int)$totals["totalDays"] > 60) {
 
   function paddingValues() {
     var margin = Math.min(window.innerWidth * 0.07, 100);
+    var isMobile = breakpointIs("sm", "down");
+    var startState = state.activeLegIndex === null;
     return {
       top: margin,
       bottom: margin,
-      left: margin + (state.activeLegIndex == null ? 280 : 360),
+      left: margin + (isMobile ? 0 : (startState ? 280 : 360)),
       right: margin,
     };
 
