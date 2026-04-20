@@ -1,7 +1,7 @@
 <?php
 // COLOR_DEFS_
 // $lineColor = "#0f521d";
-$lineColor = "#6c4c87";
+$lineColor = "#45419d";
 
 if (!$kirby->user()) {
   die("You must log in to see this page. <a href='" . url('/panel') . "'>Do</a>");

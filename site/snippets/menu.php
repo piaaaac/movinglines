@@ -166,16 +166,52 @@ $items = [
     $("button.hamburger").toggleClass("is-active", !isOpen);
   }
 
-  // Mark #menu-header with a class when body is scrolled by a certain amount
+  // -----------------------------------------------------------------------------
+  // Track last scroll position
+  // -----------------------------------------------------------------------------
+  var lastScrollTop = 0;
+  var delta = 5; // dead‑zone to avoid jitter
+  var threshold = 70; // when the header stops being "at-top"
+
   $(window).on("scroll", function() {
-    var scrollTop = $(window).scrollTop();
-    var threshold = 70;
+    var scrollTop = $(this).scrollTop();
+
+    // --- 1. Handle "at-top" class ---
     if (scrollTop > threshold) {
       $("#menu-header").removeClass("at-top");
     } else {
       $("#menu-header").addClass("at-top");
     }
+
+    // --- 2. Prevent hide-on-mobile at the very top ---
+    if (scrollTop <= 0) {
+      $("#menu-header").removeClass("hide-on-mobile");
+      lastScrollTop = scrollTop;
+      return;
+    }
+
+    // --- 3. Dead-zone: ignore tiny scroll movements ---
+    if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+      return;
+    }
+
+    // --- 4. Scroll direction logic (only below threshold) ---
+    if (scrollTop > threshold) {
+      if (scrollTop > lastScrollTop) {
+        // scrolling down
+        $("#menu-header").addClass("hide-on-mobile");
+      } else {
+        // scrolling up
+        $("#menu-header").removeClass("hide-on-mobile");
+      }
+    } else {
+      // above threshold: always show
+      $("#menu-header").removeClass("hide-on-mobile");
+    }
+
+    lastScrollTop = scrollTop;
   });
+
 
   // ---------------------------------------------------------------------------
   // Handle map visibility

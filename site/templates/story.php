@@ -5,19 +5,20 @@
 // $green_fraga_darker = "#0f521d";
 // $green_fraga_lighter = "#844DC8";
 // $green_fraga_darker = "#844DC8";
-$green_fraga_lighter = "#6c4c87";
-$green_fraga_darker = "#6c4c87";
+$green_fraga_lighter = "#45419d";
+$green_fraga_darker = "#45419d";
 
 // $page_bg_color_lighter = "#eff6ff";
 // $page_bg_color_darker = "#c0d4e3";
 $page_bg_color_lighter = "#eff6ff";
 $page_bg_color_darker = "#bfd9ec";
+$page_bg_color_darker = "#CBE1F1";
 
 // --- Prepare nav data
 
-// $siblings = $page->siblings()->listed();
-// $prevPage = $page->hasPrev($siblings) ? $page->prev($siblings) : $siblings->last();
-// $nextPage = $page->hasNext($siblings) ? $page->next($siblings) : $siblings->first();
+$siblings = $page->siblings()->listed();
+$prevPage = $page->hasPrev($siblings) ? $page->prev($siblings) : $siblings->last();
+$nextPage = $page->hasNext($siblings) ? $page->next($siblings) : $siblings->first();
 
 // --- Prepare story data
 
@@ -187,6 +188,23 @@ if ((int)$totals["totalDays"] > 60) {
 
   <div class="blocks"><?= $page->blocks()->toBlocks() ?></div>
 
+</section>
+
+<section class="d-md-none">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 d-flex justify-content-between">
+        <a href="<?= $prevPage->url() ?>" class="d-flex align-items-center no-u">
+          <span class="px-2">&larr;</span>
+          <span class="font-sans-xs">Previous<br />story</span>
+        </a>
+        <a href="<?= $nextPage->url() ?>" class="d-flex align-items-center no-u">
+          <span class="font-sans-xs">Next<br />story</span>
+          <span class="px-2">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>

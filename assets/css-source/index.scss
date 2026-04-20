@@ -15,13 +15,14 @@ $space: 20px;
 // $green_fraga_darker: #0f521d;
 // $green_fraga_lighter: #844dc8;
 // $green_fraga_darker: #844dc8;
-$green_fraga_lighter: #6c4c87;
-$green_fraga_darker: #6c4c87;
+$green_fraga_lighter: #45419d;
+$green_fraga_darker: #45419d;
 
 // $page_bg_color_lighter: #eff6ff;
 // $page_bg_color_darker: #c0d4e3;
 $page_bg_color_lighter: #eff6ff;
 $page_bg_color_darker: #bfd9ec;
+$page_bg_color_darker: #cbe1f1;
 
 // $bg_color_darkest: #2e3e64;
 $bg_color_darkest: #82a2af;
@@ -928,11 +929,16 @@ nav#menu-header {
   top: 0;
   left: 0;
   right: 0;
-  transition: all 550ms;
+  transition: all 450ms;
   padding: 0;
   background-color: var(--bg-color);
   &.transparent-at-top.at-top {
     background-color: transparent;
+  }
+  &.hide-on-mobile {
+    @include media-breakpoint-down(md) {
+      top: -120px;
+    }
   }
   .wrapper {
     height: $menu-h;

@@ -20,6 +20,8 @@ $style = $style ?? "large";
       $name = $story->title();
       $age = $story->age()->isNotEmpty() ? $story->age() : "";
       $title = "$name, $age y.o.";
+      $titleExtended = "$name, left at $age years old";
+      $titleExtendedShort = "$name, left at $age";
       $from = getFromPlace($story);
       $fromCountry = getFromCountry($story);
       $fromCountryCode = getFromCountryCode($story);
@@ -67,9 +69,10 @@ $style = $style ?? "large";
               </div>
               <div class="col-8 col-sm-9 col-xl-6 align-self-center">
                 <div class="story-details color-black mb-4">
-                  <div class="font-ser-l font-w-600 mb-1"><?= $title ?></div>
-                  <div class="font-sans-s color-grey d-none d-md-block"><?= $subtitle ?></div>
-                  <div class="font-sans-s color-grey d-md-none"><?= $subtitleShort ?></div>
+                  <div class="font-ser-l font-w-600 mb-1 d-none d-lg-block"><?= $titleExtended ?></div>
+                  <div class="font-ser-l font-w-600 mb-1 d-lg-none"><?= $titleExtendedShort ?></div>
+                  <div class="font-sans-s color-grey d-none d-lg-block"><?= $subtitle ?></div>
+                  <div class="font-sans-s color-grey d-lg-none"><?= $subtitleShort ?></div>
                 </div>
               </div>
             </div>
