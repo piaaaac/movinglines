@@ -284,6 +284,7 @@ img.cover-image {
   text-transform: uppercase;
   border-radius: 3px;
   padding: 4px 8px;
+  margin-top: 4px;
   text-decoration: none;
   &:hover {
     text-decoration: none;
@@ -302,9 +303,9 @@ img.cover-image {
       background-color: rgba($bg_color_darkest, 0.3);
     }
   }
-  & + .badge {
-    margin-left: 3px;
-  }
+  // & + .badge {
+  //   margin-left: 3px;
+  // }
 }
 
 .full-w-btn {

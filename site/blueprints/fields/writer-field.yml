@@ -8,6 +8,7 @@ nodes:
   - heading
   - bulletList
   - paragraph
+  - quote
   - horizontalRule
 toolbar:
   # inline: false

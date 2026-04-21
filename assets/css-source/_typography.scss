@@ -43,7 +43,7 @@ $font-sans: "Inter", sans-serif;
 @mixin font-ser-xl {
   @include font-style(
     $font-fam: $font-ser,
-    $xs: 32px,
+    $xs: 34px,
     $sm: 36px,
     $md: 44px,
     $lg: 44px,
@@ -59,8 +59,8 @@ $font-sans: "Inter", sans-serif;
 @mixin font-ser-l {
   @include font-style(
     $font-fam: $font-ser,
-    $xs: 21px,
-    $sm: 24px,
+    $xs: 25px,
+    $sm: 25px,
     $md: 27px,
     $lg: 27px,
     $xl: 27px,
@@ -153,6 +153,11 @@ $font-sans: "Inter", sans-serif;
 // Elements
 // -----------------------------------------------------------------------------
 
+p {
+  line-height: 1.36em;
+  // @include font-sans-m;
+  // font-weight: 400;
+}
 h1 {
   @include font-ser-xl;
   font-weight: 400;
@@ -180,6 +185,12 @@ h2,
 h3,
 h4 {
   margin-bottom: 0.7em;
+}
+
+blockquote {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 25px 25px 15px 30px;
+  border-radius: 15px;
 }
 
 // -----------------------------------------------------------------------------

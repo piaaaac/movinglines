@@ -13,7 +13,7 @@ foreach ($blockOptions as $key => $op) {
 <div class="block block-text" <?= implode(" ", $blockOptionsAttributes) ?>>
   <div class="container-fluid texts">
     <div class="row">
-      <div class="col-xl-6">
+      <div class="col-xl-9">
         <?= $block->text() ?>
       </div>
     </div>
