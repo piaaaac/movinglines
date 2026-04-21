@@ -673,6 +673,9 @@ section.map-area {
           border-radius: 7px;
           box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
           max-height: calc(100dvh - 190px);
+          @include media-breakpoint-down(sm) {
+            max-height: none;
+          }
           overflow-y: auto;
           small {
             display: block;

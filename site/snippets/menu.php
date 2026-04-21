@@ -171,13 +171,14 @@ $items = [
   // -----------------------------------------------------------------------------
   var lastScrollTop = 0;
   var delta = 5; // dead‑zone to avoid jitter
-  var threshold = 70; // when the header stops being "at-top"
+  var threshold_atTop = 70; // when the header stops being "at-top"
+  var threshold_hideOnMobile = 10; // when the header stops being "at-top"
 
   $(window).on("scroll", function() {
     var scrollTop = $(this).scrollTop();
 
     // --- 1. Handle "at-top" class ---
-    if (scrollTop > threshold) {
+    if (scrollTop > threshold_atTop) {
       $("#menu-header").removeClass("at-top");
     } else {
       $("#menu-header").addClass("at-top");
@@ -196,7 +197,7 @@ $items = [
     }
 
     // --- 4. Scroll direction logic (only below threshold) ---
-    if (scrollTop > threshold) {
+    if (scrollTop > threshold_hideOnMobile) {
       if (scrollTop > lastScrollTop) {
         // scrolling down
         $("#menu-header").addClass("hide-on-mobile");

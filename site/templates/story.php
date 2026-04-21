@@ -234,6 +234,25 @@ if ((int)$totals["totalDays"] > 60) {
     root.style.setProperty('--bg-color', newColor);
   });
 
+  const interactionMemory = {
+    userHasInteracted: false,
+    log: [],
+
+    set(type) {
+      this.userHasInteracted = true;
+      this.log.push({
+        type,
+        time: new Date().toLocaleTimeString()
+      });
+    },
+
+    reset() {
+      this.userHasInteracted = false;
+      this.log = [];
+    }
+  };
+
+
   // --------------------------------
   // Kirby > JS data init
   // --------------------------------
@@ -283,6 +302,15 @@ if ((int)$totals["totalDays"] > 60) {
     logoPosition: 'bottom-right',
     scrollZoom: (localStorage.getItem("mapVisible") === "true"),
   });
+
+  // Track user pan
+  map.on("dragend", () => interactionMemory.set("pan"));
+
+  // Track user zoom only (not programmatic)
+  map.on("zoomend", (e) => {
+    if (e.originalEvent) interactionMemory.set("zoom");
+  });
+
 
   // --------------------------------
   // Add data
@@ -502,6 +530,7 @@ if ((int)$totals["totalDays"] > 60) {
 
       if (zoom) {
         fitFullRoute();
+        interactionMemory.reset();
       }
 
       // Info box
@@ -553,8 +582,8 @@ if ((int)$totals["totalDays"] > 60) {
       });
       document.querySelector("#box-container").innerHTML = markup;
 
-      // Zoom to segment
-      if (zoom) {
+      // Zoom to segment 
+      if (zoom && interactionMemory.userHasInteracted === false) {
         var bbox = null;
         if (e.geojsonUse && e.geojsonLeg) {
           bbox = turf.bbox(e.geojsonLeg);
