@@ -41,29 +41,6 @@ $articles = page("articles")->children()->listed()->limit(3);
 
 <div class="space-large"></div>
 
-<?php /*  
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-12 mb-5">
-      <h2>Articles & Resources</h2>
-    </div>
-  </div>
-</div>
-
-<?php snippet("articles-prev", ["articles" => $articles]) ?>
-
-<div class="full-w-btn">
-  <a href="<?= page("articles")->url() ?>">
-    <?php
-    $text = "    See all resources →    ";
-    echo $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text . $text;
-    ?>
-  </a>
-</div>
-
-<div class="space-large"></div>
-*/ ?>
-
 <section id="about">
   <div class="container-fluid texts">
     <div class="row">

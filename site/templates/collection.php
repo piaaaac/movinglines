@@ -12,19 +12,21 @@
   <div class="row">
     <div class="col-12">
       <?php foreach ($page->children()->listed() as $child): ?>
-        <?php foreach ($child->tags()->split(",") as $tag) : ?>
-          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
-        <?php endforeach ?>
 
-        <?php foreach ($child->places()->split(",") as $tag) : ?>
-          <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
-        <?php endforeach ?>
+        <div class="mb-2">
+          <?php foreach ($child->tags()->split(",") as $tag) : ?>
+            <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
+          <?php endforeach ?>
+          <?php foreach ($child->places()->split(",") as $tag) : ?>
+            <a href="<?= page("stories")->url() . "?tag=" . trim($tag) ?>" class="badge badge-secondary temp-disabled"><?= trim($tag) ?></a>
+          <?php endforeach ?>
+        </div>
 
-        <h1>
-          <a href="<?= $child->url() ?>" class="color-black no-u">
+        <h2 class="font-w-400">
+          <a href="<?= $child->url() ?>" class="color-black no-u hover-accent">
             <?= $child->title()->html() ?>
           </a>
-        </h1>
+        </h2>
 
         <hr class="mb-5" />
       <?php endforeach ?>

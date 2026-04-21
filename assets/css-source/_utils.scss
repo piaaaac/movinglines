@@ -57,7 +57,12 @@
 .u-hover {
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
+  }
+}
+.hover-accent {
+  &:hover {
+    color: $green_fraga_darker !important;
   }
 }
 .rounded {

@@ -1,0 +1,97 @@
+Title: Organizations, volunteer groups, foundations, research institutions, NGOs, and collectives
+
+----
+
+Cover: 
+
+----
+
+Tags: resources
+
+----
+
+Places: Italy, France, Europe
+
+----
+
+Blocks: [{"content":{"paddingtop":"","paddingbottom":"none","text":"<p>A list of “who” is offering various forms of support to people on the move, asylum seekers, and migrants, including legal and healthcare assistance, psychological support, advocacy, reception services, training, sports programs, job placement and more.</p><p><em>This list is not exhaustive, and new additions are welcome. <br>The order is random, except for a general geographical grouping.</em></p>"},"id":"40390ff7-e076-4c5c-a99e-359b12561b39","isHidden":false,"type":"text"},{"content":{"paddingtop":"one","paddingbottom":"none","text":"<h2>Italy</h2><p><a href=\"https://www.icsufficiorifugiati.org/\" target=\"_blank\"><strong>ICS – Consorzio Italiano di Solidarietà</strong> </a>– Ufficio Rifugiati Onlus (ICS) provides protection to asylum seekers, refugees, and persons with temporary or subsidiary protection status in Trieste and Friuli Venezia Giulia, and organizes reception and integration services in the north-eastern area.</p><p><a href=\"https://www.liberinantes.org/\" target=\"_blank\"><strong>LIBERI NANTES</strong></a><strong> </strong>- Liberi Nantes is an open community where together we cultivate freedom, respect, and acceptance. We believe in play as a universal dimension of human growth and we promote sport as a tool for encounter and mutual development.</p><p><a href=\"https://www.asgi.it/en/\" target=\"_blank\"><strong>ASGI (Association for Legal Studies on Immigration)</strong></a> - Protecting and promoting the equality and human rights of foreign individuals is our primary goal. Our work focuses on areas where fundamental rights, freedom of movement, and the right to asylum are violated or compromised.</p><p><a href=\"https://www.rivoltiaibalcani.org/\" target=\"_blank\"><strong>RiVolti ai Balcani</strong></a><strong> </strong>is a network of more than thirty Italian organizations founded in October 2019 with the aim of protecting the rights of those traveling along the “Balkan route” in an attempt to reach the European Union<strong>.</strong></p><p><a href=\"https://www.cartadiroma.org/\" target=\"_blank\"><strong>Associazione “CARTA DI ROMA”</strong></a> - The Association Carta di Roma has been founded in December 2011 with the goal of implementing the Journalist’s Code of Conduct on immigration, signed by the National Council of Journalists (CNOG) and the National Federation of the Italian Press (FNSI) in June 2008. </p><p><a href=\"https://openmigration.org/en/\" target=\"_blank\"><strong>OPEN MIGRATION</strong></a> is an open and horizontal informative project which aims to give data, competences and knowledge in order to inform and raise awareness on migrants and migrations’ issues.</p><p><a href=\"https://mediciperidirittiumani.org/en/\" target=\"_blank\"><strong>Medici per i Diritti Umani – MEDU</strong></a> (Doctors for Human Rights – Italy) was founded on 2004 in Rome with the purpose of bring health to vulnerable population and denounce the violations of human rights and, in particular, on the exclusion from the right to health. </p><p><a href=\"https://www.baobabexperience.org/\" target=\"_blank\"><strong>BAOBAB EXPERIENCE</strong></a> stands for freedom of movement and the right to stay. We offer support to migrants and oppose both external and internal border policies.</p><p><a href=\"https://mediterranearescue.org/en\" target=\"_blank\"><strong>MEDITERRANEA Saving Humans</strong></a> - In the summer of 2018 the idea of Mediterranea was born; born out of indignation over the thousands of deaths in the Mediterranean and the closed-port policy. </p><p><a href=\"https://www.dossierimmigrazione.it/storico-dossier/\" target=\"_blank\"><strong>IDOS Dossier</strong></a> is the annual socio-statistical report on the migration phenomenon in Italy, the first edition dating back to 1991.</p><p><a href=\"https://www.ismu.org/en\" target=\"_blank\"><strong>Fondazione ISMU</strong></a> – Initiatives and Studies on Multi-ethnicity.</p><p><a href=\"https://www.weworld.it/en\" target=\"_blank\"><strong>WE WORLD</strong></a> - <strong>Together for a fairer world</strong>. We work alongside individuals on the geographic, economic, and social margins to overcome inequality and build a fairer future – one that upholds the dignity and diversity of people and the planet.</p><p></p>"},"id":"7c471bb3-6781-4b79-826a-0713332c9ad0","isHidden":false,"type":"text"},{"content":{"paddingtop":"one","paddingbottom":"none","text":"<h2><strong>France</strong></h2><p><a href=\"https://emmausroya.sitew.fr/\" target=\"_blank\"><strong>Communauté EMMAÜS ROYA</strong></a> - Emmaüs communities offer unconditional welcome, meaning they welcome people regardless of their origin, religion, beliefs, or administrative status, but only within the limits of available space.  </p><p><a href=\"https://www.roya-citoyenne.fr/\" target=\"_blank\"><strong>Association ROYA CITOYENNE</strong></a><strong> - </strong>Defending the fundamental rights of migrants passing through the Roya Valley and advocating for global citizenship </p><p><a href=\"https://projet-cafi.com/\" target=\"_blank\"><strong>Projet CAFI</strong></a>– Coordination des Actions aux Frontières Intérieures - The CAFI project aims to ensure that the fundamental rights of people seeking refuge at the borders are respected. It is led by Amnesty International France, La Cimade, Médecins du Monde, Médecins Sans Frontières and Secours Catholique-Caritas France.</p><p><a href=\"http://www.anafe.org\" target=\"_blank\"><strong>ANAFÉ</strong></a>– Association Nationale d’Assistance aux Frontières pour les Etrangers</p><p><a href=\"https://www.lacimade.org/\" target=\"_blank\"><strong>La CIMADE</strong></a> - La Cimade receives and advises tens of thousands of migrants, refugees and asylum seekers and provides legal support to foreigners, assisting them in accessing their rights. La Cimade leads advocacy actions towards decision makers; it informs and raises awareness on migrations among the public opinion.</p><p><a href=\"https://paysdefayencesolidaire.fr/\" target=\"_blank\"><strong>Pays de Fayence Solidaire</strong></a><strong> - </strong>The organization provides assistance to migrants of all backgrounds who are in distress at the Italian-French border or within our country. </p><p><a href=\"https://tousmigrants.weebly.com/\" target=\"_blank\"><strong>Tous Migrants</strong></a> is a citizen-led awareness and advocacy movement based in Briançon in the Hautes-Alpes region, dedicated to defending the rights of people in exile along the upper section of the French-Italian border.</p>"},"id":"427a11f1-f1dd-4eb4-9c94-abdb62fb49b5","isHidden":false,"type":"text"},{"content":{"paddingtop":"one","paddingbottom":"none","text":"<h2><strong>International </strong></h2><p><a href=\"https://unitedagainstrefugeedeaths.eu/\" target=\"_blank\"><strong>UNITED for Intercultural Action</strong></a> – European network against nationalism, racism, fascism and in support of migrants and refugees. In the ‘<a href=\"https://unitedagainstrefugeedeaths.eu/wp-content/uploads/2014/06/ListofDeathsActual.pdf\" target=\"_blank\">‘UNITED List of Refugee Deaths’</a>’, UNITED has been collecting reliable data on refugee deaths related to Fortress Europe since 1993.</p><p><a href=\"https://www.msf.org/\" target=\"_blank\"><strong>Médecins Sans Frontières (MSF)</strong></a> translates to ‘doctors without borders’. We provide medical assistance to people affected by conflict, epidemics, disasters, or exclusion from healthcare.</p><p><a href=\"https://www.sosmediterranee.org/\" target=\"_blank\"><strong>SOS Méditerranée</strong></a> is a European, maritime-humanitarian organisation for the rescue of life at sea, currently operating in the Mediterranean sea in international waters north of Libya.</p><p><a href=\"https://drc.ngo/en/\" target=\"_blank\"><strong>DRC Danish Refugee Council</strong> </a>- We work globally providing support and solutions for refugees and displaced people<strong> </strong>within four core sectors: protection, economic recovery, humanitarian disarmament &amp; peacebuilding and WASH, shelter &amp; infrastructure.</p><p><a href=\"https://migreurop.org/\" target=\"_blank\"><strong>Migreurop</strong></a> is a Euro-African network of human rights organisations, activists and researchers. </p><p><a href=\"https://www.coe.int/en/web/cpt)\" target=\"_blank\"><strong>CPT</strong> </a>- European Committee for the Prevention of Torture and Inhuman or Degrading Treatment or Punishment.</p><p><a href=\"https://www.hrw.org\" target=\"_blank\"><strong>Human Rights Watch</strong> </a>- Human Rights Watch investigates and reports on abuses happening in all corners of the world.</p><p><a href=\"https://www.medecinsdumonde.org/en/\" target=\"_blank\"><strong>Médicins du Monde</strong></a> - We are working toward a world where health is recognized as a fundamental right.</p><p><a href=\"https://www.oxfam.org/en\" target=\"_blank\"><strong>Oxfam</strong></a> is a global confederation of over 20 independent member organizations, known as affiliates, working together in over 70 countries to challenge inequality and injustice in partnership with communities</p><p><a href=\"https://www.amnesty.org\" target=\"_blank\"><strong>Amnesty International</strong></a> is a global movement of more than 10 million people in over 150 countries and territories who campaign to end abuses of human rights.</p>"},"id":"7b8718e7-258a-4288-a74b-17374474e14f","isHidden":false,"type":"text"},{"content":{"paddingtop":"one","paddingbottom":"none","text":"<h2><strong>Other Countries</strong></h2><p><a href=\"https://www.openarms.es/en\" target=\"_blank\"><strong>Open Arms</strong></a> - At sea we save lives, on land we seek solutions.</p><p><a href=\"https://www.nonamekitchen.org/\" target=\"_blank\"><strong>No Name Kitchen</strong></a> was born in Belgrade in the winter of 2017, when volunteers started cooking alongside thousands of people left to fend for themselves after the Hungarian border closure. From those first days, NNK has grown into a movement of grassroots activists committed to defending the rights of people on the move. </p><p><a href=\"https://gcr.gr/en/\" target=\"_blank\"><strong>Greek Council for Refugees (GCR)</strong></a> is a Non- Governmental Organization, which has been active since 1989 in the field of asylum and human rights in Greece. </p><p><a href=\"https://hfhr.pl/en\" target=\"_blank\"><strong>Helsinki Foundation for Human Rights </strong></a>- We are the oldest and most experienced non-governmental organization working for the protection of human rights in Poland and Eurasia. Our mission is to develop the culture of freedom and human rights in the country and abroad. </p>"},"id":"d83e2055-cfc8-431d-b421-e437d7f30964","isHidden":false,"type":"text"}]
+
+----
+
+Updated: 2026-04-16 15:30:52
+
+----
+
+Metatitle: 
+
+----
+
+Metatemplate: 
+
+----
+
+Usetitletemplate: false
+
+----
+
+Metadescription: A list of “who” offering various forms of support to people on the move, asylum seekers, and migrants, including legal and healthcare assistance,...
+
+----
+
+Ogtemplate: 
+
+----
+
+Useogtemplate: false
+
+----
+
+Ogdescription: A list of “who” offering various forms of support to people on the move, asylum seekers, and migrants, including legal and healthcare assistance,...
+
+----
+
+Ogimage: 
+
+----
+
+Twittercardtype: 
+
+----
+
+Twitterauthor: 
+
+----
+
+Robotsindex: true
+
+----
+
+Robotsfollow: true
+
+----
+
+Robotsarchive: true
+
+----
+
+Robotsimageindex: true
+
+----
+
+Robotssnippet: true
+
+----
+
+Metainherit: 
+
+----
+
+Created: 2026-01-31 17:40:00
+
+----
+
+Text: 
+
+----
+
+Uuid: zR3COGfwb8QGPDA9
