@@ -12,7 +12,7 @@ $articles = page("articles")->children()->listed()->limit(3);
     <div class="col">
       <h2 class="text-center font-ser-xl font-weight-400 my-5">
         <span class="d-inline-block" style="max-width: 30em;">
-          These lines represent the stories and journeys of asylum seekers who for various reasons left their hometown in search for a better life.
+          These lines represent the stories and journeys of people who for various reasons left their homes in search of a better life.
         </span>
       </h2>
     </div>
