@@ -164,6 +164,7 @@ h1 {
 }
 h2 {
   @include font-ser-l;
+  font-weight: 500;
 }
 h3 {
   @include font-sans-m;
