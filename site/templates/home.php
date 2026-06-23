@@ -21,7 +21,7 @@ $articles = page("articles")->children()->listed()->limit(3);
 
 <div class="spacer py-4"></div>
 
-<?php snippet("grid-test", ["stories" => $stories->limit(10)]) ?>
+<?php snippet("grid-test", ["stories" => $stories->shuffle()->limit(10)]) ?>
 
 <?php /* 
 <div class="spacer py-4"></div>
